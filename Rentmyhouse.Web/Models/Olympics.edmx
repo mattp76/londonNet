@@ -1,0 +1,1058 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="olympicsModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="olympicsModelStoreContainer">
+          <EntitySet Name="banners" EntityType="olympicsModel.Store.banners" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="blacklist" EntityType="olympicsModel.Store.blacklist" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="businessEngine" EntityType="olympicsModel.Store.businessEngine" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="businessUsers" EntityType="olympicsModel.Store.businessUsers" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="cms" EntityType="olympicsModel.Store.cms" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="contactTracking" EntityType="olympicsModel.Store.contactTracking" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="eventtracking" EntityType="olympicsModel.Store.eventtracking" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="favourites" EntityType="olympicsModel.Store.favourites" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="files" EntityType="olympicsModel.Store.files" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="googlemap" EntityType="olympicsModel.Store.googlemap" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="messagebox" EntityType="olympicsModel.Store.messagebox" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="promotions" EntityType="olympicsModel.Store.promotions" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="siteEvents" EntityType="olympicsModel.Store.siteEvents" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="sporteventstable" EntityType="olympicsModel.Store.sporteventstable" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="system" EntityType="olympicsModel.Store.system" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="userprofiles" EntityType="olympicsModel.Store.userprofiles" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="users" EntityType="olympicsModel.Store.users" store:Type="Tables" Schema="olympics" />
+          <EntitySet Name="usersdetail" EntityType="olympicsModel.Store.usersdetail" store:Type="Tables" Schema="olympics" />
+        </EntityContainer>
+        <EntityType Name="banners">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strbannerblob" Type="longtext" />
+          <Property Name="strarea" Type="varchar" MaxLength="50" />
+          <Property Name="strtotal" Type="int" />
+        </EntityType>
+        <EntityType Name="blacklist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strUsername" Type="varchar" MaxLength="200" />
+          <Property Name="strEmail" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="businessEngine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strBusinessName" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessCaption" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessInformation" Type="varchar" MaxLength="4000" />
+          <Property Name="strBusinessBanner" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessImage1" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessLink" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessTelephone" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessUsername" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessUserID" Type="int" />
+          <Property Name="strApproved" Type="int" />
+          <Property Name="strInvisible" Type="int" />
+          <Property Name="strBusinessContact" Type="varchar" MaxLength="100" />
+          <Property Name="strDate" Type="datetime" />
+          <Property Name="strDateTime" Type="datetime" />
+          <Property Name="strBusinessCategory" Type="varchar" MaxLength="45" />
+          <Property Name="strBusinessOffer" Type="varchar" />
+          <Property Name="strBusinessFind" Type="varchar" />
+          <Property Name="strBusinessPostcode" Type="varchar" MaxLength="45" />
+          <Property Name="strBusinessFeature" Type="int" />
+          <Property Name="strBusinessFeatureDate" Type="datetime" />
+          <Property Name="strBusinessSpotlight" Type="int" />
+          <Property Name="strBusinessSpotlightDate" Type="datetime" />
+          <Property Name="strBusinessSpotlightDateTimeBumpedUp" Type="datetime" />
+          <Property Name="strdatetimebumpedup" Type="datetime" />
+          <Property Name="strBusinessAddress" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessSuburb" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessCity" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessCountry" Type="varchar" MaxLength="100" />
+          <Property Name="strIso" Type="varchar" MaxLength="45" />
+          <Property Name="strUserID" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="businessUsers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strBusinessUsername" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessPassword" Type="varchar" MaxLength="100" />
+          <Property Name="strBusinessEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strDate" Type="datetime" />
+          <Property Name="strStatus" Type="varchar" MaxLength="45" />
+          <Property Name="strLast" Type="datetime" />
+          <Property Name="strIso" Type="varchar" MaxLength="45" />
+          <Property Name="strCountry" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="cms">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="contentTypeAlias" Type="varchar" MaxLength="100" />
+          <Property Name="content" Type="text" />
+          <Property Name="SS_ID" Type="uint" />
+        </EntityType>
+        <EntityType Name="contactTracking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strSender" Type="varchar" MaxLength="100" />
+          <Property Name="strRecipient" Type="varchar" MaxLength="100" />
+          <Property Name="strsenderEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strRecipientEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strDate" Type="datetime" />
+          <Property Name="strMessage" Type="varchar" MaxLength="3000" />
+          <Property Name="strStatus" Type="int" />
+          <Property Name="strEvent" Type="varchar" MaxLength="45" />
+          <Property Name="strFromCountry" Type="varchar" MaxLength="45" />
+          <Property Name="strDateTime" Type="datetime" />
+          <Property Name="strHouseId" Type="int" />
+          <Property Name="isHomeownerReply" Type="int" />
+          <Property Name="strFromISO" Type="varchar" MaxLength="45" />
+          <Property Name="ss_id" Type="int" />
+        </EntityType>
+        <EntityType Name="eventtracking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strevent" Type="longtext" />
+          <Property Name="SS_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="favourites">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strhouseid" Type="uint" />
+          <Property Name="struserid" Type="uint" />
+          <Property Name="strdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="files">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" />
+          <Property Name="strImage1" Type="varchar" MaxLength="255" />
+          <Property Name="strImage2" Type="varchar" MaxLength="255" />
+          <Property Name="strImage3" Type="varchar" MaxLength="255" />
+          <Property Name="strImage4" Type="varchar" MaxLength="255" />
+          <Property Name="strImage5" Type="varchar" MaxLength="255" />
+          <Property Name="strImage6" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="googlemap">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="houseid" Type="varchar" MaxLength="45" />
+          <Property Name="lng" Type="varchar" MaxLength="45" />
+          <Property Name="lat" Type="varchar" MaxLength="45" />
+          <Property Name="datetime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="messagebox">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strFrom" Type="varchar" MaxLength="100" />
+          <Property Name="strTo" Type="varchar" MaxLength="100" />
+          <Property Name="strDate" Type="datetime" />
+          <Property Name="strMessage" Type="varchar" MaxLength="2000" />
+          <Property Name="strFromEmail" Type="varchar" MaxLength="100" />
+          <Property Name="strToEmail" Type="varchar" MaxLength="45" />
+          <Property Name="ss_id" Type="int" />
+        </EntityType>
+        <EntityType Name="promotions">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="isSpotlight" Type="bool" />
+          <Property Name="spotlightDateTime" Type="datetime" />
+          <Property Name="spotlightDateTimeBumpUp" Type="datetime" />
+          <Property Name="isHighlight" Type="bool" />
+          <Property Name="highlightDateTime" Type="datetime" />
+          <Property Name="isFeatured" Type="bool" />
+          <Property Name="featuredDateTime" Type="datetime" />
+          <Property Name="featuredDateTimeBumpup" Type="datetime" />
+          <Property Name="isUrgent" Type="bool" />
+          <Property Name="urgentDateTime" Type="datetime" />
+          <Property Name="houseid" Type="int" />
+          <Property Name="islisting" Type="bool" />
+          <Property Name="listingDateTime" Type="datetime" />
+          <Property Name="listingDateTimeBumpUp" Type="datetime" />
+          <Property Name="isBumpup" Type="bool" />
+          <Property Name="bumpupDateTime" Type="datetime" />
+          <Property Name="ss_id" Type="int" />
+        </EntityType>
+        <EntityType Name="siteEvents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strEvent" Type="varchar" />
+          <Property Name="strDateTime" Type="datetime" />
+          <Property Name="strStatus" Type="int" />
+          <Property Name="ss_id" Type="int" />
+        </EntityType>
+        <EntityType Name="sporteventstable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strtype" Type="varchar" MaxLength="50" />
+          <Property Name="strbed" Type="int" />
+          <Property Name="straddress" Type="varchar" MaxLength="50" />
+          <Property Name="strtown" Type="varchar" MaxLength="50" />
+          <Property Name="strcity" Type="varchar" MaxLength="50" />
+          <Property Name="strarea" Type="varchar" MaxLength="50" />
+          <Property Name="strcounty" Type="varchar" MaxLength="50" />
+          <Property Name="strpostcode" Type="varchar" MaxLength="50" />
+          <Property Name="strdescription" Type="longtext" />
+          <Property Name="strolympics" Type="longtext" />
+          <Property Name="strzone" Type="varchar" MaxLength="50" />
+          <Property Name="strname" Type="varchar" MaxLength="50" />
+          <Property Name="strphone" Type="varchar" MaxLength="50" />
+          <Property Name="stremail" Type="varchar" MaxLength="50" />
+          <Property Name="strimage1" Type="varchar" MaxLength="100" />
+          <Property Name="strimage2" Type="varchar" MaxLength="100" />
+          <Property Name="strapproved" Type="varchar" MaxLength="50" />
+          <Property Name="strdate" Type="datetime" />
+          <Property Name="strdatetime" Type="datetime" />
+          <Property Name="strpostedby" Type="varchar" MaxLength="50" />
+          <Property Name="strinvisible" Type="int" />
+          <Property Name="strhits" Type="int" />
+          <Property Name="stradtype" Type="varchar" MaxLength="50" />
+          <Property Name="strevent" Type="varchar" MaxLength="200" />
+          <Property Name="strprimevent" Type="varchar" MaxLength="50" />
+          <Property Name="strsecevent" Type="varchar" />
+          <Property Name="strswap" Type="varchar" MaxLength="45" />
+          <Property Name="strimage3" Type="varchar" MaxLength="100" />
+          <Property Name="strimage4" Type="varchar" MaxLength="100" />
+          <Property Name="strparking" Type="varchar" MaxLength="45" />
+          <Property Name="strPrice" Type="varchar" MaxLength="45" />
+          <Property Name="strDateFrom" Type="varchar" MaxLength="45" />
+          <Property Name="strDateTo" Type="varchar" MaxLength="45" />
+          <Property Name="strNeg" Type="varchar" MaxLength="45" />
+          <Property Name="strEntered" Type="datetime" />
+          <Property Name="strUpdated" Type="datetime" />
+          <Property Name="strDateTimeBumpedUp" Type="datetime" />
+          <Property Name="strSpotlightDateTime" Type="datetime" />
+          <Property Name="strSpotlightDateTimeBumpedUp" Type="datetime" />
+          <Property Name="strEmailStatus" Type="varchar" MaxLength="45" />
+          <Property Name="strMeetHost" Type="varchar" MaxLength="45" />
+          <Property Name="ss_id" Type="int" />
+          <Property Name="strImage5" Type="varchar" MaxLength="100" />
+          <Property Name="strImage6" Type="varchar" MaxLength="100" />
+          <Property Name="strCaption" Type="varchar" />
+          <Property Name="strAdd1" Type="varchar" MaxLength="500" />
+          <Property Name="strAdd2" Type="varchar" MaxLength="500" />
+          <Property Name="strAdd3" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="system">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="userprofiles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="up_firstname" Type="varchar" MaxLength="100" />
+          <Property Name="up_lastname" Type="varchar" MaxLength="100" />
+          <Property Name="up_dob" Type="varchar" MaxLength="45" />
+          <Property Name="up_language" Type="varchar" />
+          <Property Name="up_aboutme" Type="varchar" />
+          <Property Name="up_image1" Type="varchar" MaxLength="100" />
+          <Property Name="up_image2" Type="varchar" MaxLength="100" />
+          <Property Name="up_entered" Type="datetime" />
+          <Property Name="up_updated" Type="datetime" />
+          <Property Name="up_username" Type="varchar" MaxLength="100" />
+          <Property Name="up_userid" Type="int" />
+          <Property Name="up_account" Type="varchar" MaxLength="45" />
+          <Property Name="up_status" Type="varchar" MaxLength="1" />
+          <Property Name="up_date" Type="datetime" />
+          <Property Name="up_houseid" Type="int" />
+          <Property Name="up_work" Type="varchar" MaxLength="100" />
+          <Property Name="up_education" Type="varchar" MaxLength="100" />
+          <Property Name="up_hobbies" Type="varchar" />
+          <Property Name="up_gender" Type="varchar" MaxLength="45" />
+          <Property Name="up_country" Type="varchar" MaxLength="100" />
+          <Property Name="up_event" Type="varchar" />
+          <Property Name="up_contact" Type="varchar" MaxLength="10" />
+          <Property Name="up_type" Type="varchar" MaxLength="100" />
+          <Property Name="up_swap" Type="varchar" MaxLength="10" />
+          <Property Name="up_membersince" Type="varchar" MaxLength="45" />
+          <Property Name="up_iso" Type="varchar" MaxLength="10" />
+          <Property Name="up_bed" Type="varchar" MaxLength="10" />
+          <Property Name="ss_id" Type="int" />
+          <Property Name="strHome" Type="varchar" MaxLength="100" />
+          <Property Name="up_caption" Type="varchar" MaxLength="100" />
+          <Property Name="up_datefrom" Type="varchar" MaxLength="45" />
+          <Property Name="up_dateto" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="strusername" Type="varchar" MaxLength="50" />
+          <Property Name="strpassword" Type="varchar" MaxLength="50" />
+          <Property Name="strsecurity" Type="int" />
+          <Property Name="strkeyword" Type="varchar" MaxLength="50" />
+          <Property Name="strdate" Type="datetime" />
+          <Property Name="strstatus" Type="varchar" MaxLength="50" />
+          <Property Name="strlast" Type="datetime" />
+          <Property Name="strCountry" Type="varchar" MaxLength="100" />
+          <Property Name="strIso" Type="varchar" MaxLength="45" />
+          <Property Name="fb_userid" Type="varchar" MaxLength="100" />
+          <Property Name="blacklist" Type="varchar" MaxLength="45" />
+          <Property Name="strEmailStatus" Type="varchar" MaxLength="45" />
+          <Property Name="strUnsubscribe" Type="varchar" MaxLength="45" />
+          <Property Name="ss_id" Type="int" />
+          <Property Name="strTerms" Type="varchar" MaxLength="45" />
+          <Property Name="strFirstname" Type="varchar" MaxLength="45" />
+          <Property Name="strLastname" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="usersdetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="varchar" MaxLength="100" />
+          <Property Name="acquired" Type="varchar" MaxLength="100" />
+          <Property Name="ip" Type="varchar" MaxLength="100" />
+          <Property Name="browser" Type="varchar" MaxLength="200" />
+          <Property Name="region" Type="varchar" MaxLength="100" />
+          <Property Name="datetime" Type="datetime" />
+          <Property Name="ss_id" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'olympics.usergooglemap' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="usergooglemap">
+        <Property Name="userid" Type="int" />
+        <Property Name="lat" Type="char" MaxLength="100" />
+        <Property Name="lng" Type="varchar" MaxLength="100" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="olympicsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="olympicsEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="banners" EntityType="olympicsModel.banner" />
+          <EntitySet Name="blacklists" EntityType="olympicsModel.blacklist" />
+          <EntitySet Name="businessEngines" EntityType="olympicsModel.businessEngine" />
+          <EntitySet Name="businessUsers" EntityType="olympicsModel.businessUser" />
+          <EntitySet Name="cms" EntityType="olympicsModel.cm" />
+          <EntitySet Name="contactTrackings" EntityType="olympicsModel.contactTracking" />
+          <EntitySet Name="eventtrackings" EntityType="olympicsModel.eventtracking" />
+          <EntitySet Name="favourites" EntityType="olympicsModel.favourite" />
+          <EntitySet Name="files" EntityType="olympicsModel.file" />
+          <EntitySet Name="googlemaps" EntityType="olympicsModel.googlemap" />
+          <EntitySet Name="messageboxes" EntityType="olympicsModel.messagebox" />
+          <EntitySet Name="promotions" EntityType="olympicsModel.promotion" />
+          <EntitySet Name="siteEvents" EntityType="olympicsModel.siteEvent" />
+          <EntitySet Name="sporteventstables" EntityType="olympicsModel.sporteventstable" />
+          <EntitySet Name="systems" EntityType="olympicsModel.system" />
+          <EntitySet Name="userprofiles" EntityType="olympicsModel.userprofile" />
+          <EntitySet Name="users" EntityType="olympicsModel.user" />
+          <EntitySet Name="usersdetails" EntityType="olympicsModel.usersdetail" />
+        </EntityContainer>
+        <EntityType Name="banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strbannerblob" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strarea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strtotal" Type="Int32" />
+        </EntityType>
+        <EntityType Name="blacklist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strUsername" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="strEmail" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="businessEngine">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strBusinessName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessCaption" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessInformation" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessBanner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessImage1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessLink" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessTelephone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessUsername" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessUserID" Type="Int32" />
+          <Property Name="strApproved" Type="Int32" />
+          <Property Name="strInvisible" Type="Int32" />
+          <Property Name="strBusinessContact" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDate" Type="DateTime" Precision="0" />
+          <Property Name="strDateTime" Type="DateTime" Precision="0" />
+          <Property Name="strBusinessCategory" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessOffer" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessFind" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessPostcode" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessFeature" Type="Int32" />
+          <Property Name="strBusinessFeatureDate" Type="DateTime" Precision="0" />
+          <Property Name="strBusinessSpotlight" Type="Int32" />
+          <Property Name="strBusinessSpotlightDate" Type="DateTime" Precision="0" />
+          <Property Name="strBusinessSpotlightDateTimeBumpedUp" Type="DateTime" Precision="0" />
+          <Property Name="strdatetimebumpedup" Type="DateTime" Precision="0" />
+          <Property Name="strBusinessAddress" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessSuburb" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessCity" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strUserID" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="businessUser">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strBusinessUsername" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessPassword" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strBusinessEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDate" Type="DateTime" Precision="0" />
+          <Property Name="strStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strLast" Type="DateTime" Precision="0" />
+          <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="cm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="contentTypeAlias" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="content" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+          <Property Name="SS_ID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="contactTracking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strSender" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strRecipient" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strsenderEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strRecipientEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDate" Type="DateTime" Precision="0" />
+          <Property Name="strMessage" Type="String" MaxLength="3000" Unicode="false" FixedLength="false" />
+          <Property Name="strStatus" Type="Int32" />
+          <Property Name="strEvent" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strFromCountry" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strDateTime" Type="DateTime" Precision="0" />
+          <Property Name="strHouseId" Type="Int32" />
+          <Property Name="isHomeownerReply" Type="Int32" />
+          <Property Name="strFromISO" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="ss_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="eventtracking">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strevent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SS_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="favourite">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strhouseid" Type="Int64" />
+          <Property Name="struserid" Type="Int64" />
+          <Property Name="strdate" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="file">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" />
+          <Property Name="strImage1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="strImage2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="strImage3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="strImage4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="strImage5" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="strImage6" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="googlemap">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="houseid" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="lng" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="lat" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="datetime" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="messagebox">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strFrom" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strTo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strDate" Type="DateTime" Precision="0" />
+          <Property Name="strMessage" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="strFromEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strToEmail" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="ss_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="promotion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="isSpotlight" Type="Boolean" />
+          <Property Name="spotlightDateTime" Type="DateTime" Precision="0" />
+          <Property Name="spotlightDateTimeBumpUp" Type="DateTime" Precision="0" />
+          <Property Name="isHighlight" Type="Boolean" />
+          <Property Name="highlightDateTime" Type="DateTime" Precision="0" />
+          <Property Name="isFeatured" Type="Boolean" />
+          <Property Name="featuredDateTime" Type="DateTime" Precision="0" />
+          <Property Name="featuredDateTimeBumpup" Type="DateTime" Precision="0" />
+          <Property Name="isUrgent" Type="Boolean" />
+          <Property Name="urgentDateTime" Type="DateTime" Precision="0" />
+          <Property Name="houseid" Type="Int32" />
+          <Property Name="islisting" Type="Boolean" />
+          <Property Name="listingDateTime" Type="DateTime" Precision="0" />
+          <Property Name="listingDateTimeBumpUp" Type="DateTime" Precision="0" />
+          <Property Name="isBumpup" Type="Boolean" />
+          <Property Name="bumpupDateTime" Type="DateTime" Precision="0" />
+          <Property Name="ss_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="siteEvent">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strEvent" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strDateTime" Type="DateTime" Precision="0" />
+          <Property Name="strStatus" Type="Int32" />
+          <Property Name="ss_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="sporteventstable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strtype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strbed" Type="Int32" />
+          <Property Name="straddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strtown" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strcity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strarea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strcounty" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strpostcode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strdescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strolympics" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="strzone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strphone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="stremail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strimage1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strimage2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strapproved" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strdate" Type="DateTime" Precision="0" />
+          <Property Name="strdatetime" Type="DateTime" Precision="0" />
+          <Property Name="strpostedby" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strinvisible" Type="Int32" />
+          <Property Name="strhits" Type="Int32" />
+          <Property Name="stradtype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strevent" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="strprimevent" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strsecevent" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strswap" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strimage3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strimage4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strparking" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strPrice" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strDateFrom" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strDateTo" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strNeg" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strEntered" Type="DateTime" Precision="0" />
+          <Property Name="strUpdated" Type="DateTime" Precision="0" />
+          <Property Name="strDateTimeBumpedUp" Type="DateTime" Precision="0" />
+          <Property Name="strSpotlightDateTime" Type="DateTime" Precision="0" />
+          <Property Name="strSpotlightDateTimeBumpedUp" Type="DateTime" Precision="0" />
+          <Property Name="strEmailStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strMeetHost" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="ss_id" Type="Int32" />
+          <Property Name="strImage5" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strImage6" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strCaption" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="strAdd1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strAdd2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="strAdd3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="system">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="userprofile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="up_firstname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_lastname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_dob" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="up_language" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="up_aboutme" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="up_image1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_image2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_entered" Type="DateTime" Precision="0" />
+          <Property Name="up_updated" Type="DateTime" Precision="0" />
+          <Property Name="up_username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_userid" Type="Int32" />
+          <Property Name="up_account" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="up_status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="up_date" Type="DateTime" Precision="0" />
+          <Property Name="up_houseid" Type="Int32" />
+          <Property Name="up_work" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_education" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_hobbies" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="up_gender" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="up_country" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_event" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="up_contact" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="up_type" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_swap" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="up_membersince" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="up_iso" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="up_bed" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ss_id" Type="Int32" />
+          <Property Name="strHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_caption" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="up_datefrom" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="up_dateto" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="strusername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strpassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strsecurity" Type="Int32" />
+          <Property Name="strkeyword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strdate" Type="DateTime" Precision="0" />
+          <Property Name="strstatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="strlast" Type="DateTime" Precision="0" />
+          <Property Name="strCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="fb_userid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="blacklist" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strEmailStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strUnsubscribe" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="ss_id" Type="Int32" />
+          <Property Name="strTerms" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strFirstname" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+          <Property Name="strLastname" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="usersdetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="acquired" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ip" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="browser" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="region" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="datetime" Type="DateTime" Precision="0" />
+          <Property Name="ss_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="olympicsModelStoreContainer" CdmEntityContainer="olympicsEntities">
+          <EntitySetMapping Name="banners">
+            <EntityTypeMapping TypeName="olympicsModel.banner">
+              <MappingFragment StoreEntitySet="banners">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strbannerblob" ColumnName="strbannerblob" />
+                <ScalarProperty Name="strarea" ColumnName="strarea" />
+                <ScalarProperty Name="strtotal" ColumnName="strtotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="blacklists">
+            <EntityTypeMapping TypeName="olympicsModel.blacklist">
+              <MappingFragment StoreEntitySet="blacklist">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strUsername" ColumnName="strUsername" />
+                <ScalarProperty Name="strEmail" ColumnName="strEmail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="businessEngines">
+            <EntityTypeMapping TypeName="olympicsModel.businessEngine">
+              <MappingFragment StoreEntitySet="businessEngine">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strBusinessName" ColumnName="strBusinessName" />
+                <ScalarProperty Name="strBusinessCaption" ColumnName="strBusinessCaption" />
+                <ScalarProperty Name="strBusinessInformation" ColumnName="strBusinessInformation" />
+                <ScalarProperty Name="strBusinessBanner" ColumnName="strBusinessBanner" />
+                <ScalarProperty Name="strBusinessImage1" ColumnName="strBusinessImage1" />
+                <ScalarProperty Name="strBusinessLink" ColumnName="strBusinessLink" />
+                <ScalarProperty Name="strBusinessTelephone" ColumnName="strBusinessTelephone" />
+                <ScalarProperty Name="strBusinessEmail" ColumnName="strBusinessEmail" />
+                <ScalarProperty Name="strBusinessUsername" ColumnName="strBusinessUsername" />
+                <ScalarProperty Name="strBusinessUserID" ColumnName="strBusinessUserID" />
+                <ScalarProperty Name="strApproved" ColumnName="strApproved" />
+                <ScalarProperty Name="strInvisible" ColumnName="strInvisible" />
+                <ScalarProperty Name="strBusinessContact" ColumnName="strBusinessContact" />
+                <ScalarProperty Name="strDate" ColumnName="strDate" />
+                <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+                <ScalarProperty Name="strBusinessCategory" ColumnName="strBusinessCategory" />
+                <ScalarProperty Name="strBusinessOffer" ColumnName="strBusinessOffer" />
+                <ScalarProperty Name="strBusinessFind" ColumnName="strBusinessFind" />
+                <ScalarProperty Name="strBusinessPostcode" ColumnName="strBusinessPostcode" />
+                <ScalarProperty Name="strBusinessFeature" ColumnName="strBusinessFeature" />
+                <ScalarProperty Name="strBusinessFeatureDate" ColumnName="strBusinessFeatureDate" />
+                <ScalarProperty Name="strBusinessSpotlight" ColumnName="strBusinessSpotlight" />
+                <ScalarProperty Name="strBusinessSpotlightDate" ColumnName="strBusinessSpotlightDate" />
+                <ScalarProperty Name="strBusinessSpotlightDateTimeBumpedUp" ColumnName="strBusinessSpotlightDateTimeBumpedUp" />
+                <ScalarProperty Name="strdatetimebumpedup" ColumnName="strdatetimebumpedup" />
+                <ScalarProperty Name="strBusinessAddress" ColumnName="strBusinessAddress" />
+                <ScalarProperty Name="strBusinessSuburb" ColumnName="strBusinessSuburb" />
+                <ScalarProperty Name="strBusinessCity" ColumnName="strBusinessCity" />
+                <ScalarProperty Name="strBusinessCountry" ColumnName="strBusinessCountry" />
+                <ScalarProperty Name="strIso" ColumnName="strIso" />
+                <ScalarProperty Name="strUserID" ColumnName="strUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="businessUsers">
+            <EntityTypeMapping TypeName="olympicsModel.businessUser">
+              <MappingFragment StoreEntitySet="businessUsers">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strBusinessUsername" ColumnName="strBusinessUsername" />
+                <ScalarProperty Name="strBusinessPassword" ColumnName="strBusinessPassword" />
+                <ScalarProperty Name="strBusinessEmail" ColumnName="strBusinessEmail" />
+                <ScalarProperty Name="strDate" ColumnName="strDate" />
+                <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+                <ScalarProperty Name="strLast" ColumnName="strLast" />
+                <ScalarProperty Name="strIso" ColumnName="strIso" />
+                <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cms">
+            <EntityTypeMapping TypeName="olympicsModel.cm">
+              <MappingFragment StoreEntitySet="cms">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="contentTypeAlias" ColumnName="contentTypeAlias" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contactTrackings">
+            <EntityTypeMapping TypeName="olympicsModel.contactTracking">
+              <MappingFragment StoreEntitySet="contactTracking">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strSender" ColumnName="strSender" />
+                <ScalarProperty Name="strRecipient" ColumnName="strRecipient" />
+                <ScalarProperty Name="strsenderEmail" ColumnName="strsenderEmail" />
+                <ScalarProperty Name="strRecipientEmail" ColumnName="strRecipientEmail" />
+                <ScalarProperty Name="strDate" ColumnName="strDate" />
+                <ScalarProperty Name="strMessage" ColumnName="strMessage" />
+                <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+                <ScalarProperty Name="strEvent" ColumnName="strEvent" />
+                <ScalarProperty Name="strFromCountry" ColumnName="strFromCountry" />
+                <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+                <ScalarProperty Name="strHouseId" ColumnName="strHouseId" />
+                <ScalarProperty Name="isHomeownerReply" ColumnName="isHomeownerReply" />
+                <ScalarProperty Name="strFromISO" ColumnName="strFromISO" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="eventtrackings">
+            <EntityTypeMapping TypeName="olympicsModel.eventtracking">
+              <MappingFragment StoreEntitySet="eventtracking">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strevent" ColumnName="strevent" />
+                <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="favourites">
+            <EntityTypeMapping TypeName="olympicsModel.favourite">
+              <MappingFragment StoreEntitySet="favourites">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strhouseid" ColumnName="strhouseid" />
+                <ScalarProperty Name="struserid" ColumnName="struserid" />
+                <ScalarProperty Name="strdate" ColumnName="strdate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="files">
+            <EntityTypeMapping TypeName="olympicsModel.file">
+              <MappingFragment StoreEntitySet="files">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strImage1" ColumnName="strImage1" />
+                <ScalarProperty Name="strImage2" ColumnName="strImage2" />
+                <ScalarProperty Name="strImage3" ColumnName="strImage3" />
+                <ScalarProperty Name="strImage4" ColumnName="strImage4" />
+                <ScalarProperty Name="strImage5" ColumnName="strImage5" />
+                <ScalarProperty Name="strImage6" ColumnName="strImage6" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="googlemaps">
+            <EntityTypeMapping TypeName="olympicsModel.googlemap">
+              <MappingFragment StoreEntitySet="googlemap">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="houseid" ColumnName="houseid" />
+                <ScalarProperty Name="lng" ColumnName="lng" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="messageboxes">
+            <EntityTypeMapping TypeName="olympicsModel.messagebox">
+              <MappingFragment StoreEntitySet="messagebox">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strFrom" ColumnName="strFrom" />
+                <ScalarProperty Name="strTo" ColumnName="strTo" />
+                <ScalarProperty Name="strDate" ColumnName="strDate" />
+                <ScalarProperty Name="strMessage" ColumnName="strMessage" />
+                <ScalarProperty Name="strFromEmail" ColumnName="strFromEmail" />
+                <ScalarProperty Name="strToEmail" ColumnName="strToEmail" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="promotions">
+            <EntityTypeMapping TypeName="olympicsModel.promotion">
+              <MappingFragment StoreEntitySet="promotions">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="isSpotlight" ColumnName="isSpotlight" />
+                <ScalarProperty Name="spotlightDateTime" ColumnName="spotlightDateTime" />
+                <ScalarProperty Name="spotlightDateTimeBumpUp" ColumnName="spotlightDateTimeBumpUp" />
+                <ScalarProperty Name="isHighlight" ColumnName="isHighlight" />
+                <ScalarProperty Name="highlightDateTime" ColumnName="highlightDateTime" />
+                <ScalarProperty Name="isFeatured" ColumnName="isFeatured" />
+                <ScalarProperty Name="featuredDateTime" ColumnName="featuredDateTime" />
+                <ScalarProperty Name="featuredDateTimeBumpup" ColumnName="featuredDateTimeBumpup" />
+                <ScalarProperty Name="isUrgent" ColumnName="isUrgent" />
+                <ScalarProperty Name="urgentDateTime" ColumnName="urgentDateTime" />
+                <ScalarProperty Name="houseid" ColumnName="houseid" />
+                <ScalarProperty Name="islisting" ColumnName="islisting" />
+                <ScalarProperty Name="listingDateTime" ColumnName="listingDateTime" />
+                <ScalarProperty Name="listingDateTimeBumpUp" ColumnName="listingDateTimeBumpUp" />
+                <ScalarProperty Name="isBumpup" ColumnName="isBumpup" />
+                <ScalarProperty Name="bumpupDateTime" ColumnName="bumpupDateTime" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="siteEvents">
+            <EntityTypeMapping TypeName="olympicsModel.siteEvent">
+              <MappingFragment StoreEntitySet="siteEvents">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strEvent" ColumnName="strEvent" />
+                <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+                <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sporteventstables">
+            <EntityTypeMapping TypeName="olympicsModel.sporteventstable">
+              <MappingFragment StoreEntitySet="sporteventstable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strtype" ColumnName="strtype" />
+                <ScalarProperty Name="strbed" ColumnName="strbed" />
+                <ScalarProperty Name="straddress" ColumnName="straddress" />
+                <ScalarProperty Name="strtown" ColumnName="strtown" />
+                <ScalarProperty Name="strcity" ColumnName="strcity" />
+                <ScalarProperty Name="strarea" ColumnName="strarea" />
+                <ScalarProperty Name="strcounty" ColumnName="strcounty" />
+                <ScalarProperty Name="strpostcode" ColumnName="strpostcode" />
+                <ScalarProperty Name="strdescription" ColumnName="strdescription" />
+                <ScalarProperty Name="strolympics" ColumnName="strolympics" />
+                <ScalarProperty Name="strzone" ColumnName="strzone" />
+                <ScalarProperty Name="strname" ColumnName="strname" />
+                <ScalarProperty Name="strphone" ColumnName="strphone" />
+                <ScalarProperty Name="stremail" ColumnName="stremail" />
+                <ScalarProperty Name="strimage1" ColumnName="strimage1" />
+                <ScalarProperty Name="strimage2" ColumnName="strimage2" />
+                <ScalarProperty Name="strapproved" ColumnName="strapproved" />
+                <ScalarProperty Name="strdate" ColumnName="strdate" />
+                <ScalarProperty Name="strdatetime" ColumnName="strdatetime" />
+                <ScalarProperty Name="strpostedby" ColumnName="strpostedby" />
+                <ScalarProperty Name="strinvisible" ColumnName="strinvisible" />
+                <ScalarProperty Name="strhits" ColumnName="strhits" />
+                <ScalarProperty Name="stradtype" ColumnName="stradtype" />
+                <ScalarProperty Name="strevent" ColumnName="strevent" />
+                <ScalarProperty Name="strprimevent" ColumnName="strprimevent" />
+                <ScalarProperty Name="strsecevent" ColumnName="strsecevent" />
+                <ScalarProperty Name="strswap" ColumnName="strswap" />
+                <ScalarProperty Name="strimage3" ColumnName="strimage3" />
+                <ScalarProperty Name="strimage4" ColumnName="strimage4" />
+                <ScalarProperty Name="strparking" ColumnName="strparking" />
+                <ScalarProperty Name="strPrice" ColumnName="strPrice" />
+                <ScalarProperty Name="strDateFrom" ColumnName="strDateFrom" />
+                <ScalarProperty Name="strDateTo" ColumnName="strDateTo" />
+                <ScalarProperty Name="strNeg" ColumnName="strNeg" />
+                <ScalarProperty Name="strEntered" ColumnName="strEntered" />
+                <ScalarProperty Name="strUpdated" ColumnName="strUpdated" />
+                <ScalarProperty Name="strDateTimeBumpedUp" ColumnName="strDateTimeBumpedUp" />
+                <ScalarProperty Name="strSpotlightDateTime" ColumnName="strSpotlightDateTime" />
+                <ScalarProperty Name="strSpotlightDateTimeBumpedUp" ColumnName="strSpotlightDateTimeBumpedUp" />
+                <ScalarProperty Name="strEmailStatus" ColumnName="strEmailStatus" />
+                <ScalarProperty Name="strMeetHost" ColumnName="strMeetHost" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+                <ScalarProperty Name="strImage5" ColumnName="strImage5" />
+                <ScalarProperty Name="strImage6" ColumnName="strImage6" />
+                <ScalarProperty Name="strCaption" ColumnName="strCaption" />
+                <ScalarProperty Name="strAdd1" ColumnName="strAdd1" />
+                <ScalarProperty Name="strAdd2" ColumnName="strAdd2" />
+                <ScalarProperty Name="strAdd3" ColumnName="strAdd3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="systems">
+            <EntityTypeMapping TypeName="olympicsModel.system">
+              <MappingFragment StoreEntitySet="system">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userprofiles">
+            <EntityTypeMapping TypeName="olympicsModel.userprofile">
+              <MappingFragment StoreEntitySet="userprofiles">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="up_firstname" ColumnName="up_firstname" />
+                <ScalarProperty Name="up_lastname" ColumnName="up_lastname" />
+                <ScalarProperty Name="up_dob" ColumnName="up_dob" />
+                <ScalarProperty Name="up_language" ColumnName="up_language" />
+                <ScalarProperty Name="up_aboutme" ColumnName="up_aboutme" />
+                <ScalarProperty Name="up_image1" ColumnName="up_image1" />
+                <ScalarProperty Name="up_image2" ColumnName="up_image2" />
+                <ScalarProperty Name="up_entered" ColumnName="up_entered" />
+                <ScalarProperty Name="up_updated" ColumnName="up_updated" />
+                <ScalarProperty Name="up_username" ColumnName="up_username" />
+                <ScalarProperty Name="up_userid" ColumnName="up_userid" />
+                <ScalarProperty Name="up_account" ColumnName="up_account" />
+                <ScalarProperty Name="up_status" ColumnName="up_status" />
+                <ScalarProperty Name="up_date" ColumnName="up_date" />
+                <ScalarProperty Name="up_houseid" ColumnName="up_houseid" />
+                <ScalarProperty Name="up_work" ColumnName="up_work" />
+                <ScalarProperty Name="up_education" ColumnName="up_education" />
+                <ScalarProperty Name="up_hobbies" ColumnName="up_hobbies" />
+                <ScalarProperty Name="up_gender" ColumnName="up_gender" />
+                <ScalarProperty Name="up_country" ColumnName="up_country" />
+                <ScalarProperty Name="up_event" ColumnName="up_event" />
+                <ScalarProperty Name="up_contact" ColumnName="up_contact" />
+                <ScalarProperty Name="up_type" ColumnName="up_type" />
+                <ScalarProperty Name="up_swap" ColumnName="up_swap" />
+                <ScalarProperty Name="up_membersince" ColumnName="up_membersince" />
+                <ScalarProperty Name="up_iso" ColumnName="up_iso" />
+                <ScalarProperty Name="up_bed" ColumnName="up_bed" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+                <ScalarProperty Name="strHome" ColumnName="strHome" />
+                <ScalarProperty Name="up_caption" ColumnName="up_caption" />
+                <ScalarProperty Name="up_datefrom" ColumnName="up_datefrom" />
+                <ScalarProperty Name="up_dateto" ColumnName="up_dateto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="olympicsModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="strusername" ColumnName="strusername" />
+                <ScalarProperty Name="strpassword" ColumnName="strpassword" />
+                <ScalarProperty Name="strsecurity" ColumnName="strsecurity" />
+                <ScalarProperty Name="strkeyword" ColumnName="strkeyword" />
+                <ScalarProperty Name="strdate" ColumnName="strdate" />
+                <ScalarProperty Name="strstatus" ColumnName="strstatus" />
+                <ScalarProperty Name="strlast" ColumnName="strlast" />
+                <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+                <ScalarProperty Name="strIso" ColumnName="strIso" />
+                <ScalarProperty Name="fb_userid" ColumnName="fb_userid" />
+                <ScalarProperty Name="blacklist" ColumnName="blacklist" />
+                <ScalarProperty Name="strEmailStatus" ColumnName="strEmailStatus" />
+                <ScalarProperty Name="strUnsubscribe" ColumnName="strUnsubscribe" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+                <ScalarProperty Name="strTerms" ColumnName="strTerms" />
+                <ScalarProperty Name="strFirstname" ColumnName="strFirstname" />
+                <ScalarProperty Name="strLastname" ColumnName="strLastname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usersdetails">
+            <EntityTypeMapping TypeName="olympicsModel.usersdetail">
+              <MappingFragment StoreEntitySet="usersdetail">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="acquired" ColumnName="acquired" />
+                <ScalarProperty Name="ip" ColumnName="ip" />
+                <ScalarProperty Name="browser" ColumnName="browser" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="datetime" ColumnName="datetime" />
+                <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

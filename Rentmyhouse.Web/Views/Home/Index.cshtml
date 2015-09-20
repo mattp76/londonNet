@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section Styles {
+    <link href="@Url.Content("~/Content/Snippets/Hover/component.css")" rel="stylesheet" type="text/css" />
+}
+
+
+@section Scripts {
+  
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".page-number").live("click", function () {
+
+                
+                var page = parseInt($(this).html());
+
+
+                console.log(page);
+
+                
+
+                $.ajax({
+                    url: '@Url.Action("HomepageGallery")',
+                data: { "page": page },
+                success: function (data) {
+                    $("#HomepageGallery").html(data);
+                }
+            });
+        });
+    });
+</script>
+
+
+}
+
+
+
+<div id="HomepageGallery">
+@{Html.RenderPartial("HomepageGallery", ViewData["HomepageGalleryAdverts"]);}
+</div>
+    

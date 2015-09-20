@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="olympicsModelStoreContainer" CdmEntityContainer="olympicsEntities">
+    <EntitySetMapping Name="banners">
+      <EntityTypeMapping TypeName="olympicsModel.banner">
+        <MappingFragment StoreEntitySet="banners">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strbannerblob" ColumnName="strbannerblob" />
+          <ScalarProperty Name="strarea" ColumnName="strarea" />
+          <ScalarProperty Name="strtotal" ColumnName="strtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blacklists">
+      <EntityTypeMapping TypeName="olympicsModel.blacklist">
+        <MappingFragment StoreEntitySet="blacklist">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strUsername" ColumnName="strUsername" />
+          <ScalarProperty Name="strEmail" ColumnName="strEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="businessEngines">
+      <EntityTypeMapping TypeName="olympicsModel.businessEngine">
+        <MappingFragment StoreEntitySet="businessEngine">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strBusinessName" ColumnName="strBusinessName" />
+          <ScalarProperty Name="strBusinessCaption" ColumnName="strBusinessCaption" />
+          <ScalarProperty Name="strBusinessInformation" ColumnName="strBusinessInformation" />
+          <ScalarProperty Name="strBusinessBanner" ColumnName="strBusinessBanner" />
+          <ScalarProperty Name="strBusinessImage1" ColumnName="strBusinessImage1" />
+          <ScalarProperty Name="strBusinessLink" ColumnName="strBusinessLink" />
+          <ScalarProperty Name="strBusinessTelephone" ColumnName="strBusinessTelephone" />
+          <ScalarProperty Name="strBusinessEmail" ColumnName="strBusinessEmail" />
+          <ScalarProperty Name="strBusinessUsername" ColumnName="strBusinessUsername" />
+          <ScalarProperty Name="strBusinessUserID" ColumnName="strBusinessUserID" />
+          <ScalarProperty Name="strApproved" ColumnName="strApproved" />
+          <ScalarProperty Name="strInvisible" ColumnName="strInvisible" />
+          <ScalarProperty Name="strBusinessContact" ColumnName="strBusinessContact" />
+          <ScalarProperty Name="strDate" ColumnName="strDate" />
+          <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+          <ScalarProperty Name="strBusinessCategory" ColumnName="strBusinessCategory" />
+          <ScalarProperty Name="strBusinessOffer" ColumnName="strBusinessOffer" />
+          <ScalarProperty Name="strBusinessFind" ColumnName="strBusinessFind" />
+          <ScalarProperty Name="strBusinessPostcode" ColumnName="strBusinessPostcode" />
+          <ScalarProperty Name="strBusinessFeature" ColumnName="strBusinessFeature" />
+          <ScalarProperty Name="strBusinessFeatureDate" ColumnName="strBusinessFeatureDate" />
+          <ScalarProperty Name="strBusinessSpotlight" ColumnName="strBusinessSpotlight" />
+          <ScalarProperty Name="strBusinessSpotlightDate" ColumnName="strBusinessSpotlightDate" />
+          <ScalarProperty Name="strBusinessSpotlightDateTimeBumpedUp" ColumnName="strBusinessSpotlightDateTimeBumpedUp" />
+          <ScalarProperty Name="strdatetimebumpedup" ColumnName="strdatetimebumpedup" />
+          <ScalarProperty Name="strBusinessAddress" ColumnName="strBusinessAddress" />
+          <ScalarProperty Name="strBusinessSuburb" ColumnName="strBusinessSuburb" />
+          <ScalarProperty Name="strBusinessCity" ColumnName="strBusinessCity" />
+          <ScalarProperty Name="strBusinessCountry" ColumnName="strBusinessCountry" />
+          <ScalarProperty Name="strIso" ColumnName="strIso" />
+          <ScalarProperty Name="strUserID" ColumnName="strUserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="businessUsers">
+      <EntityTypeMapping TypeName="olympicsModel.businessUser">
+        <MappingFragment StoreEntitySet="businessUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strBusinessUsername" ColumnName="strBusinessUsername" />
+          <ScalarProperty Name="strBusinessPassword" ColumnName="strBusinessPassword" />
+          <ScalarProperty Name="strBusinessEmail" ColumnName="strBusinessEmail" />
+          <ScalarProperty Name="strDate" ColumnName="strDate" />
+          <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+          <ScalarProperty Name="strLast" ColumnName="strLast" />
+          <ScalarProperty Name="strIso" ColumnName="strIso" />
+          <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cms">
+      <EntityTypeMapping TypeName="olympicsModel.cm">
+        <MappingFragment StoreEntitySet="cms">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contentTypeAlias" ColumnName="contentTypeAlias" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="contactTrackings">
+      <EntityTypeMapping TypeName="olympicsModel.contactTracking">
+        <MappingFragment StoreEntitySet="contactTracking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strSender" ColumnName="strSender" />
+          <ScalarProperty Name="strRecipient" ColumnName="strRecipient" />
+          <ScalarProperty Name="strsenderEmail" ColumnName="strsenderEmail" />
+          <ScalarProperty Name="strRecipientEmail" ColumnName="strRecipientEmail" />
+          <ScalarProperty Name="strDate" ColumnName="strDate" />
+          <ScalarProperty Name="strMessage" ColumnName="strMessage" />
+          <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+          <ScalarProperty Name="strEvent" ColumnName="strEvent" />
+          <ScalarProperty Name="strFromCountry" ColumnName="strFromCountry" />
+          <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+          <ScalarProperty Name="strHouseId" ColumnName="strHouseId" />
+          <ScalarProperty Name="isHomeownerReply" ColumnName="isHomeownerReply" />
+          <ScalarProperty Name="strFromISO" ColumnName="strFromISO" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eventtrackings">
+      <EntityTypeMapping TypeName="olympicsModel.eventtracking">
+        <MappingFragment StoreEntitySet="eventtracking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strevent" ColumnName="strevent" />
+          <ScalarProperty Name="SS_ID" ColumnName="SS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="favourites">
+      <EntityTypeMapping TypeName="olympicsModel.favourite">
+        <MappingFragment StoreEntitySet="favourites">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strhouseid" ColumnName="strhouseid" />
+          <ScalarProperty Name="struserid" ColumnName="struserid" />
+          <ScalarProperty Name="strdate" ColumnName="strdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="files">
+      <EntityTypeMapping TypeName="olympicsModel.file">
+        <MappingFragment StoreEntitySet="files">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strImage1" ColumnName="strImage1" />
+          <ScalarProperty Name="strImage2" ColumnName="strImage2" />
+          <ScalarProperty Name="strImage3" ColumnName="strImage3" />
+          <ScalarProperty Name="strImage4" ColumnName="strImage4" />
+          <ScalarProperty Name="strImage5" ColumnName="strImage5" />
+          <ScalarProperty Name="strImage6" ColumnName="strImage6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="googlemaps">
+      <EntityTypeMapping TypeName="olympicsModel.googlemap">
+        <MappingFragment StoreEntitySet="googlemap">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="houseid" ColumnName="houseid" />
+          <ScalarProperty Name="lng" ColumnName="lng" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="messageboxes">
+      <EntityTypeMapping TypeName="olympicsModel.messagebox">
+        <MappingFragment StoreEntitySet="messagebox">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strFrom" ColumnName="strFrom" />
+          <ScalarProperty Name="strTo" ColumnName="strTo" />
+          <ScalarProperty Name="strDate" ColumnName="strDate" />
+          <ScalarProperty Name="strMessage" ColumnName="strMessage" />
+          <ScalarProperty Name="strFromEmail" ColumnName="strFromEmail" />
+          <ScalarProperty Name="strToEmail" ColumnName="strToEmail" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promotions">
+      <EntityTypeMapping TypeName="olympicsModel.promotion">
+        <MappingFragment StoreEntitySet="promotions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="isSpotlight" ColumnName="isSpotlight" />
+          <ScalarProperty Name="spotlightDateTime" ColumnName="spotlightDateTime" />
+          <ScalarProperty Name="spotlightDateTimeBumpUp" ColumnName="spotlightDateTimeBumpUp" />
+          <ScalarProperty Name="isHighlight" ColumnName="isHighlight" />
+          <ScalarProperty Name="highlightDateTime" ColumnName="highlightDateTime" />
+          <ScalarProperty Name="isFeatured" ColumnName="isFeatured" />
+          <ScalarProperty Name="featuredDateTime" ColumnName="featuredDateTime" />
+          <ScalarProperty Name="featuredDateTimeBumpup" ColumnName="featuredDateTimeBumpup" />
+          <ScalarProperty Name="isUrgent" ColumnName="isUrgent" />
+          <ScalarProperty Name="urgentDateTime" ColumnName="urgentDateTime" />
+          <ScalarProperty Name="houseid" ColumnName="houseid" />
+          <ScalarProperty Name="islisting" ColumnName="islisting" />
+          <ScalarProperty Name="listingDateTime" ColumnName="listingDateTime" />
+          <ScalarProperty Name="listingDateTimeBumpUp" ColumnName="listingDateTimeBumpUp" />
+          <ScalarProperty Name="isBumpup" ColumnName="isBumpup" />
+          <ScalarProperty Name="bumpupDateTime" ColumnName="bumpupDateTime" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="siteEvents">
+      <EntityTypeMapping TypeName="olympicsModel.siteEvent">
+        <MappingFragment StoreEntitySet="siteEvents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strEvent" ColumnName="strEvent" />
+          <ScalarProperty Name="strDateTime" ColumnName="strDateTime" />
+          <ScalarProperty Name="strStatus" ColumnName="strStatus" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sporteventstables">
+      <EntityTypeMapping TypeName="olympicsModel.sporteventstable">
+        <MappingFragment StoreEntitySet="sporteventstable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strtype" ColumnName="strtype" />
+          <ScalarProperty Name="strbed" ColumnName="strbed" />
+          <ScalarProperty Name="straddress" ColumnName="straddress" />
+          <ScalarProperty Name="strtown" ColumnName="strtown" />
+          <ScalarProperty Name="strcity" ColumnName="strcity" />
+          <ScalarProperty Name="strarea" ColumnName="strarea" />
+          <ScalarProperty Name="strcounty" ColumnName="strcounty" />
+          <ScalarProperty Name="strpostcode" ColumnName="strpostcode" />
+          <ScalarProperty Name="strdescription" ColumnName="strdescription" />
+          <ScalarProperty Name="strolympics" ColumnName="strolympics" />
+          <ScalarProperty Name="strzone" ColumnName="strzone" />
+          <ScalarProperty Name="strname" ColumnName="strname" />
+          <ScalarProperty Name="strphone" ColumnName="strphone" />
+          <ScalarProperty Name="stremail" ColumnName="stremail" />
+          <ScalarProperty Name="strimage1" ColumnName="strimage1" />
+          <ScalarProperty Name="strimage2" ColumnName="strimage2" />
+          <ScalarProperty Name="strapproved" ColumnName="strapproved" />
+          <ScalarProperty Name="strdate" ColumnName="strdate" />
+          <ScalarProperty Name="strdatetime" ColumnName="strdatetime" />
+          <ScalarProperty Name="strpostedby" ColumnName="strpostedby" />
+          <ScalarProperty Name="strinvisible" ColumnName="strinvisible" />
+          <ScalarProperty Name="strhits" ColumnName="strhits" />
+          <ScalarProperty Name="stradtype" ColumnName="stradtype" />
+          <ScalarProperty Name="strevent" ColumnName="strevent" />
+          <ScalarProperty Name="strprimevent" ColumnName="strprimevent" />
+          <ScalarProperty Name="strsecevent" ColumnName="strsecevent" />
+          <ScalarProperty Name="strswap" ColumnName="strswap" />
+          <ScalarProperty Name="strimage3" ColumnName="strimage3" />
+          <ScalarProperty Name="strimage4" ColumnName="strimage4" />
+          <ScalarProperty Name="strparking" ColumnName="strparking" />
+          <ScalarProperty Name="strPrice" ColumnName="strPrice" />
+          <ScalarProperty Name="strDateFrom" ColumnName="strDateFrom" />
+          <ScalarProperty Name="strDateTo" ColumnName="strDateTo" />
+          <ScalarProperty Name="strNeg" ColumnName="strNeg" />
+          <ScalarProperty Name="strEntered" ColumnName="strEntered" />
+          <ScalarProperty Name="strUpdated" ColumnName="strUpdated" />
+          <ScalarProperty Name="strDateTimeBumpedUp" ColumnName="strDateTimeBumpedUp" />
+          <ScalarProperty Name="strSpotlightDateTime" ColumnName="strSpotlightDateTime" />
+          <ScalarProperty Name="strSpotlightDateTimeBumpedUp" ColumnName="strSpotlightDateTimeBumpedUp" />
+          <ScalarProperty Name="strEmailStatus" ColumnName="strEmailStatus" />
+          <ScalarProperty Name="strMeetHost" ColumnName="strMeetHost" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+          <ScalarProperty Name="strImage5" ColumnName="strImage5" />
+          <ScalarProperty Name="strImage6" ColumnName="strImage6" />
+          <ScalarProperty Name="strCaption" ColumnName="strCaption" />
+          <ScalarProperty Name="strAdd1" ColumnName="strAdd1" />
+          <ScalarProperty Name="strAdd2" ColumnName="strAdd2" />
+          <ScalarProperty Name="strAdd3" ColumnName="strAdd3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="systems">
+      <EntityTypeMapping TypeName="olympicsModel.system">
+        <MappingFragment StoreEntitySet="system">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userprofiles">
+      <EntityTypeMapping TypeName="olympicsModel.userprofile">
+        <MappingFragment StoreEntitySet="userprofiles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="up_firstname" ColumnName="up_firstname" />
+          <ScalarProperty Name="up_lastname" ColumnName="up_lastname" />
+          <ScalarProperty Name="up_dob" ColumnName="up_dob" />
+          <ScalarProperty Name="up_language" ColumnName="up_language" />
+          <ScalarProperty Name="up_aboutme" ColumnName="up_aboutme" />
+          <ScalarProperty Name="up_image1" ColumnName="up_image1" />
+          <ScalarProperty Name="up_image2" ColumnName="up_image2" />
+          <ScalarProperty Name="up_entered" ColumnName="up_entered" />
+          <ScalarProperty Name="up_updated" ColumnName="up_updated" />
+          <ScalarProperty Name="up_username" ColumnName="up_username" />
+          <ScalarProperty Name="up_userid" ColumnName="up_userid" />
+          <ScalarProperty Name="up_account" ColumnName="up_account" />
+          <ScalarProperty Name="up_status" ColumnName="up_status" />
+          <ScalarProperty Name="up_date" ColumnName="up_date" />
+          <ScalarProperty Name="up_houseid" ColumnName="up_houseid" />
+          <ScalarProperty Name="up_work" ColumnName="up_work" />
+          <ScalarProperty Name="up_education" ColumnName="up_education" />
+          <ScalarProperty Name="up_hobbies" ColumnName="up_hobbies" />
+          <ScalarProperty Name="up_gender" ColumnName="up_gender" />
+          <ScalarProperty Name="up_country" ColumnName="up_country" />
+          <ScalarProperty Name="up_event" ColumnName="up_event" />
+          <ScalarProperty Name="up_contact" ColumnName="up_contact" />
+          <ScalarProperty Name="up_type" ColumnName="up_type" />
+          <ScalarProperty Name="up_swap" ColumnName="up_swap" />
+          <ScalarProperty Name="up_membersince" ColumnName="up_membersince" />
+          <ScalarProperty Name="up_iso" ColumnName="up_iso" />
+          <ScalarProperty Name="up_bed" ColumnName="up_bed" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+          <ScalarProperty Name="strHome" ColumnName="strHome" />
+          <ScalarProperty Name="up_caption" ColumnName="up_caption" />
+          <ScalarProperty Name="up_datefrom" ColumnName="up_datefrom" />
+          <ScalarProperty Name="up_dateto" ColumnName="up_dateto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="olympicsModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="strusername" ColumnName="strusername" />
+          <ScalarProperty Name="strpassword" ColumnName="strpassword" />
+          <ScalarProperty Name="strsecurity" ColumnName="strsecurity" />
+          <ScalarProperty Name="strkeyword" ColumnName="strkeyword" />
+          <ScalarProperty Name="strdate" ColumnName="strdate" />
+          <ScalarProperty Name="strstatus" ColumnName="strstatus" />
+          <ScalarProperty Name="strlast" ColumnName="strlast" />
+          <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+          <ScalarProperty Name="strIso" ColumnName="strIso" />
+          <ScalarProperty Name="fb_userid" ColumnName="fb_userid" />
+          <ScalarProperty Name="blacklist" ColumnName="blacklist" />
+          <ScalarProperty Name="strEmailStatus" ColumnName="strEmailStatus" />
+          <ScalarProperty Name="strUnsubscribe" ColumnName="strUnsubscribe" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+          <ScalarProperty Name="strTerms" ColumnName="strTerms" />
+          <ScalarProperty Name="strFirstname" ColumnName="strFirstname" />
+          <ScalarProperty Name="strLastname" ColumnName="strLastname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usersdetails">
+      <EntityTypeMapping TypeName="olympicsModel.usersdetail">
+        <MappingFragment StoreEntitySet="usersdetail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="acquired" ColumnName="acquired" />
+          <ScalarProperty Name="ip" ColumnName="ip" />
+          <ScalarProperty Name="browser" ColumnName="browser" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+          <ScalarProperty Name="ss_id" ColumnName="ss_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="olympicsModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="olympicsModelStoreContainer">
+    <EntitySet Name="banners" EntityType="olympicsModel.Store.banners" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="blacklist" EntityType="olympicsModel.Store.blacklist" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="businessEngine" EntityType="olympicsModel.Store.businessEngine" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="businessUsers" EntityType="olympicsModel.Store.businessUsers" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="cms" EntityType="olympicsModel.Store.cms" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="contactTracking" EntityType="olympicsModel.Store.contactTracking" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="eventtracking" EntityType="olympicsModel.Store.eventtracking" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="favourites" EntityType="olympicsModel.Store.favourites" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="files" EntityType="olympicsModel.Store.files" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="googlemap" EntityType="olympicsModel.Store.googlemap" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="messagebox" EntityType="olympicsModel.Store.messagebox" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="promotions" EntityType="olympicsModel.Store.promotions" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="siteEvents" EntityType="olympicsModel.Store.siteEvents" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="sporteventstable" EntityType="olympicsModel.Store.sporteventstable" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="system" EntityType="olympicsModel.Store.system" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="userprofiles" EntityType="olympicsModel.Store.userprofiles" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="users" EntityType="olympicsModel.Store.users" store:Type="Tables" Schema="olympics" />
+    <EntitySet Name="usersdetail" EntityType="olympicsModel.Store.usersdetail" store:Type="Tables" Schema="olympics" />
+  </EntityContainer>
+  <EntityType Name="banners">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strbannerblob" Type="longtext" />
+    <Property Name="strarea" Type="varchar" MaxLength="50" />
+    <Property Name="strtotal" Type="int" />
+  </EntityType>
+  <EntityType Name="blacklist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strUsername" Type="varchar" MaxLength="200" />
+    <Property Name="strEmail" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="businessEngine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strBusinessName" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessCaption" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessInformation" Type="varchar" MaxLength="4000" />
+    <Property Name="strBusinessBanner" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessImage1" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessLink" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessTelephone" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessEmail" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessUsername" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessUserID" Type="int" />
+    <Property Name="strApproved" Type="int" />
+    <Property Name="strInvisible" Type="int" />
+    <Property Name="strBusinessContact" Type="varchar" MaxLength="100" />
+    <Property Name="strDate" Type="datetime" />
+    <Property Name="strDateTime" Type="datetime" />
+    <Property Name="strBusinessCategory" Type="varchar" MaxLength="45" />
+    <Property Name="strBusinessOffer" Type="varchar" />
+    <Property Name="strBusinessFind" Type="varchar" />
+    <Property Name="strBusinessPostcode" Type="varchar" MaxLength="45" />
+    <Property Name="strBusinessFeature" Type="int" />
+    <Property Name="strBusinessFeatureDate" Type="datetime" />
+    <Property Name="strBusinessSpotlight" Type="int" />
+    <Property Name="strBusinessSpotlightDate" Type="datetime" />
+    <Property Name="strBusinessSpotlightDateTimeBumpedUp" Type="datetime" />
+    <Property Name="strdatetimebumpedup" Type="datetime" />
+    <Property Name="strBusinessAddress" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessSuburb" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessCity" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessCountry" Type="varchar" MaxLength="100" />
+    <Property Name="strIso" Type="varchar" MaxLength="45" />
+    <Property Name="strUserID" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="businessUsers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strBusinessUsername" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessPassword" Type="varchar" MaxLength="100" />
+    <Property Name="strBusinessEmail" Type="varchar" MaxLength="100" />
+    <Property Name="strDate" Type="datetime" />
+    <Property Name="strStatus" Type="varchar" MaxLength="45" />
+    <Property Name="strLast" Type="datetime" />
+    <Property Name="strIso" Type="varchar" MaxLength="45" />
+    <Property Name="strCountry" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="cms">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="contentTypeAlias" Type="varchar" MaxLength="100" />
+    <Property Name="content" Type="text" />
+    <Property Name="SS_ID" Type="uint" />
+  </EntityType>
+  <EntityType Name="contactTracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strSender" Type="varchar" MaxLength="100" />
+    <Property Name="strRecipient" Type="varchar" MaxLength="100" />
+    <Property Name="strsenderEmail" Type="varchar" MaxLength="100" />
+    <Property Name="strRecipientEmail" Type="varchar" MaxLength="100" />
+    <Property Name="strDate" Type="datetime" />
+    <Property Name="strMessage" Type="varchar" MaxLength="3000" />
+    <Property Name="strStatus" Type="int" />
+    <Property Name="strEvent" Type="varchar" MaxLength="45" />
+    <Property Name="strFromCountry" Type="varchar" MaxLength="45" />
+    <Property Name="strDateTime" Type="datetime" />
+    <Property Name="strHouseId" Type="int" />
+    <Property Name="isHomeownerReply" Type="int" />
+    <Property Name="strFromISO" Type="varchar" MaxLength="45" />
+    <Property Name="ss_id" Type="int" />
+  </EntityType>
+  <EntityType Name="eventtracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strevent" Type="longtext" />
+    <Property Name="SS_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="favourites">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strhouseid" Type="uint" />
+    <Property Name="struserid" Type="uint" />
+    <Property Name="strdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="files">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="strImage1" Type="varchar" MaxLength="255" />
+    <Property Name="strImage2" Type="varchar" MaxLength="255" />
+    <Property Name="strImage3" Type="varchar" MaxLength="255" />
+    <Property Name="strImage4" Type="varchar" MaxLength="255" />
+    <Property Name="strImage5" Type="varchar" MaxLength="255" />
+    <Property Name="strImage6" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="googlemap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="houseid" Type="varchar" MaxLength="45" />
+    <Property Name="lng" Type="varchar" MaxLength="45" />
+    <Property Name="lat" Type="varchar" MaxLength="45" />
+    <Property Name="datetime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="messagebox">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strFrom" Type="varchar" MaxLength="100" />
+    <Property Name="strTo" Type="varchar" MaxLength="100" />
+    <Property Name="strDate" Type="datetime" />
+    <Property Name="strMessage" Type="varchar" MaxLength="2000" />
+    <Property Name="strFromEmail" Type="varchar" MaxLength="100" />
+    <Property Name="strToEmail" Type="varchar" MaxLength="45" />
+    <Property Name="ss_id" Type="int" />
+  </EntityType>
+  <EntityType Name="promotions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="isSpotlight" Type="bool" />
+    <Property Name="spotlightDateTime" Type="datetime" />
+    <Property Name="spotlightDateTimeBumpUp" Type="datetime" />
+    <Property Name="isHighlight" Type="bool" />
+    <Property Name="highlightDateTime" Type="datetime" />
+    <Property Name="isFeatured" Type="bool" />
+    <Property Name="featuredDateTime" Type="datetime" />
+    <Property Name="featuredDateTimeBumpup" Type="datetime" />
+    <Property Name="isUrgent" Type="bool" />
+    <Property Name="urgentDateTime" Type="datetime" />
+    <Property Name="houseid" Type="int" />
+    <Property Name="islisting" Type="bool" />
+    <Property Name="listingDateTime" Type="datetime" />
+    <Property Name="listingDateTimeBumpUp" Type="datetime" />
+    <Property Name="isBumpup" Type="bool" />
+    <Property Name="bumpupDateTime" Type="datetime" />
+    <Property Name="ss_id" Type="int" />
+  </EntityType>
+  <EntityType Name="siteEvents">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strEvent" Type="varchar" />
+    <Property Name="strDateTime" Type="datetime" />
+    <Property Name="strStatus" Type="int" />
+    <Property Name="ss_id" Type="int" />
+  </EntityType>
+  <EntityType Name="sporteventstable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strtype" Type="varchar" MaxLength="50" />
+    <Property Name="strbed" Type="int" />
+    <Property Name="straddress" Type="varchar" MaxLength="50" />
+    <Property Name="strtown" Type="varchar" MaxLength="50" />
+    <Property Name="strcity" Type="varchar" MaxLength="50" />
+    <Property Name="strarea" Type="varchar" MaxLength="50" />
+    <Property Name="strcounty" Type="varchar" MaxLength="50" />
+    <Property Name="strpostcode" Type="varchar" MaxLength="50" />
+    <Property Name="strdescription" Type="longtext" />
+    <Property Name="strolympics" Type="longtext" />
+    <Property Name="strzone" Type="varchar" MaxLength="50" />
+    <Property Name="strname" Type="varchar" MaxLength="50" />
+    <Property Name="strphone" Type="varchar" MaxLength="50" />
+    <Property Name="stremail" Type="varchar" MaxLength="50" />
+    <Property Name="strimage1" Type="varchar" MaxLength="100" />
+    <Property Name="strimage2" Type="varchar" MaxLength="100" />
+    <Property Name="strapproved" Type="varchar" MaxLength="50" />
+    <Property Name="strdate" Type="datetime" />
+    <Property Name="strdatetime" Type="datetime" />
+    <Property Name="strpostedby" Type="varchar" MaxLength="50" />
+    <Property Name="strinvisible" Type="int" />
+    <Property Name="strhits" Type="int" />
+    <Property Name="stradtype" Type="varchar" MaxLength="50" />
+    <Property Name="strevent" Type="varchar" MaxLength="200" />
+    <Property Name="strprimevent" Type="varchar" MaxLength="50" />
+    <Property Name="strsecevent" Type="varchar" />
+    <Property Name="strswap" Type="varchar" MaxLength="45" />
+    <Property Name="strimage3" Type="varchar" MaxLength="100" />
+    <Property Name="strimage4" Type="varchar" MaxLength="100" />
+    <Property Name="strparking" Type="varchar" MaxLength="45" />
+    <Property Name="strPrice" Type="varchar" MaxLength="45" />
+    <Property Name="strDateFrom" Type="varchar" MaxLength="45" />
+    <Property Name="strDateTo" Type="varchar" MaxLength="45" />
+    <Property Name="strNeg" Type="varchar" MaxLength="45" />
+    <Property Name="strEntered" Type="datetime" />
+    <Property Name="strUpdated" Type="datetime" />
+    <Property Name="strDateTimeBumpedUp" Type="datetime" />
+    <Property Name="strSpotlightDateTime" Type="datetime" />
+    <Property Name="strSpotlightDateTimeBumpedUp" Type="datetime" />
+    <Property Name="strEmailStatus" Type="varchar" MaxLength="45" />
+    <Property Name="strMeetHost" Type="varchar" MaxLength="45" />
+    <Property Name="ss_id" Type="int" />
+    <Property Name="strImage5" Type="varchar" MaxLength="100" />
+    <Property Name="strImage6" Type="varchar" MaxLength="100" />
+    <Property Name="strCaption" Type="varchar" />
+    <Property Name="strAdd1" Type="varchar" MaxLength="500" />
+    <Property Name="strAdd2" Type="varchar" MaxLength="500" />
+    <Property Name="strAdd3" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="system">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="userprofiles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="up_firstname" Type="varchar" MaxLength="100" />
+    <Property Name="up_lastname" Type="varchar" MaxLength="100" />
+    <Property Name="up_dob" Type="varchar" MaxLength="45" />
+    <Property Name="up_language" Type="varchar" />
+    <Property Name="up_aboutme" Type="varchar" />
+    <Property Name="up_image1" Type="varchar" MaxLength="100" />
+    <Property Name="up_image2" Type="varchar" MaxLength="100" />
+    <Property Name="up_entered" Type="datetime" />
+    <Property Name="up_updated" Type="datetime" />
+    <Property Name="up_username" Type="varchar" MaxLength="100" />
+    <Property Name="up_userid" Type="int" />
+    <Property Name="up_account" Type="varchar" MaxLength="45" />
+    <Property Name="up_status" Type="varchar" MaxLength="1" />
+    <Property Name="up_date" Type="datetime" />
+    <Property Name="up_houseid" Type="int" />
+    <Property Name="up_work" Type="varchar" MaxLength="100" />
+    <Property Name="up_education" Type="varchar" MaxLength="100" />
+    <Property Name="up_hobbies" Type="varchar" />
+    <Property Name="up_gender" Type="varchar" MaxLength="45" />
+    <Property Name="up_country" Type="varchar" MaxLength="100" />
+    <Property Name="up_event" Type="varchar" />
+    <Property Name="up_contact" Type="varchar" MaxLength="10" />
+    <Property Name="up_type" Type="varchar" MaxLength="100" />
+    <Property Name="up_swap" Type="varchar" MaxLength="10" />
+    <Property Name="up_membersince" Type="varchar" MaxLength="45" />
+    <Property Name="up_iso" Type="varchar" MaxLength="10" />
+    <Property Name="up_bed" Type="varchar" MaxLength="10" />
+    <Property Name="ss_id" Type="int" />
+    <Property Name="strHome" Type="varchar" MaxLength="100" />
+    <Property Name="up_caption" Type="varchar" MaxLength="100" />
+    <Property Name="up_datefrom" Type="varchar" MaxLength="45" />
+    <Property Name="up_dateto" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="strusername" Type="varchar" MaxLength="50" />
+    <Property Name="strpassword" Type="varchar" MaxLength="50" />
+    <Property Name="strsecurity" Type="int" />
+    <Property Name="strkeyword" Type="varchar" MaxLength="50" />
+    <Property Name="strdate" Type="datetime" />
+    <Property Name="strstatus" Type="varchar" MaxLength="50" />
+    <Property Name="strlast" Type="datetime" />
+    <Property Name="strCountry" Type="varchar" MaxLength="100" />
+    <Property Name="strIso" Type="varchar" MaxLength="45" />
+    <Property Name="fb_userid" Type="varchar" MaxLength="100" />
+    <Property Name="blacklist" Type="varchar" MaxLength="45" />
+    <Property Name="strEmailStatus" Type="varchar" MaxLength="45" />
+    <Property Name="strUnsubscribe" Type="varchar" MaxLength="45" />
+    <Property Name="ss_id" Type="int" />
+    <Property Name="strTerms" Type="varchar" MaxLength="45" />
+    <Property Name="strFirstname" Type="varchar" MaxLength="45" />
+    <Property Name="strLastname" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="usersdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" MaxLength="100" />
+    <Property Name="acquired" Type="varchar" MaxLength="100" />
+    <Property Name="ip" Type="varchar" MaxLength="100" />
+    <Property Name="browser" Type="varchar" MaxLength="200" />
+    <Property Name="region" Type="varchar" MaxLength="100" />
+    <Property Name="datetime" Type="datetime" />
+    <Property Name="ss_id" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'olympics.usergooglemap' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="usergooglemap">
+        <Property Name="userid" Type="int" />
+        <Property Name="lat" Type="char" MaxLength="100" />
+        <Property Name="lng" Type="varchar" MaxLength="100" />
+      </EntityType>-->
+</Schema>

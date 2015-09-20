@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="olympicsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="olympicsEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="banners" EntityType="olympicsModel.banner" />
+    <EntitySet Name="blacklists" EntityType="olympicsModel.blacklist" />
+    <EntitySet Name="businessEngines" EntityType="olympicsModel.businessEngine" />
+    <EntitySet Name="businessUsers" EntityType="olympicsModel.businessUser" />
+    <EntitySet Name="cms" EntityType="olympicsModel.cm" />
+    <EntitySet Name="contactTrackings" EntityType="olympicsModel.contactTracking" />
+    <EntitySet Name="eventtrackings" EntityType="olympicsModel.eventtracking" />
+    <EntitySet Name="favourites" EntityType="olympicsModel.favourite" />
+    <EntitySet Name="files" EntityType="olympicsModel.file" />
+    <EntitySet Name="googlemaps" EntityType="olympicsModel.googlemap" />
+    <EntitySet Name="messageboxes" EntityType="olympicsModel.messagebox" />
+    <EntitySet Name="promotions" EntityType="olympicsModel.promotion" />
+    <EntitySet Name="siteEvents" EntityType="olympicsModel.siteEvent" />
+    <EntitySet Name="sporteventstables" EntityType="olympicsModel.sporteventstable" />
+    <EntitySet Name="systems" EntityType="olympicsModel.system" />
+    <EntitySet Name="userprofiles" EntityType="olympicsModel.userprofile" />
+    <EntitySet Name="users" EntityType="olympicsModel.user" />
+    <EntitySet Name="usersdetails" EntityType="olympicsModel.usersdetail" />
+  </EntityContainer>
+  <EntityType Name="banner">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strbannerblob" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="strarea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strtotal" Type="Int32" />
+  </EntityType>
+  <EntityType Name="blacklist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strUsername" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="strEmail" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="businessEngine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strBusinessName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessCaption" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessInformation" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessBanner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessImage1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessLink" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessTelephone" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessUsername" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessUserID" Type="Int32" />
+    <Property Name="strApproved" Type="Int32" />
+    <Property Name="strInvisible" Type="Int32" />
+    <Property Name="strBusinessContact" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strDate" Type="DateTime" Precision="0" />
+    <Property Name="strDateTime" Type="DateTime" Precision="0" />
+    <Property Name="strBusinessCategory" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessOffer" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessFind" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessPostcode" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessFeature" Type="Int32" />
+    <Property Name="strBusinessFeatureDate" Type="DateTime" Precision="0" />
+    <Property Name="strBusinessSpotlight" Type="Int32" />
+    <Property Name="strBusinessSpotlightDate" Type="DateTime" Precision="0" />
+    <Property Name="strBusinessSpotlightDateTimeBumpedUp" Type="DateTime" Precision="0" />
+    <Property Name="strdatetimebumpedup" Type="DateTime" Precision="0" />
+    <Property Name="strBusinessAddress" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessSuburb" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessCity" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strUserID" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="businessUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strBusinessUsername" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessPassword" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strBusinessEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strDate" Type="DateTime" Precision="0" />
+    <Property Name="strStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strLast" Type="DateTime" Precision="0" />
+    <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="cm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="contentTypeAlias" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="content" Type="String" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="SS_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="contactTracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strSender" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strRecipient" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strsenderEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strRecipientEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strDate" Type="DateTime" Precision="0" />
+    <Property Name="strMessage" Type="String" MaxLength="3000" Unicode="false" FixedLength="false" />
+    <Property Name="strStatus" Type="Int32" />
+    <Property Name="strEvent" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strFromCountry" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strDateTime" Type="DateTime" Precision="0" />
+    <Property Name="strHouseId" Type="Int32" />
+    <Property Name="isHomeownerReply" Type="Int32" />
+    <Property Name="strFromISO" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ss_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="eventtracking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strevent" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="SS_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="favourite">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strhouseid" Type="Int64" />
+    <Property Name="struserid" Type="Int64" />
+    <Property Name="strdate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="file">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="strImage1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="strImage2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="strImage3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="strImage4" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="strImage5" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="strImage6" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="googlemap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="houseid" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="lng" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="lat" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="datetime" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="messagebox">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strFrom" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strTo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strDate" Type="DateTime" Precision="0" />
+    <Property Name="strMessage" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="strFromEmail" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strToEmail" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ss_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="promotion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="isSpotlight" Type="Boolean" />
+    <Property Name="spotlightDateTime" Type="DateTime" Precision="0" />
+    <Property Name="spotlightDateTimeBumpUp" Type="DateTime" Precision="0" />
+    <Property Name="isHighlight" Type="Boolean" />
+    <Property Name="highlightDateTime" Type="DateTime" Precision="0" />
+    <Property Name="isFeatured" Type="Boolean" />
+    <Property Name="featuredDateTime" Type="DateTime" Precision="0" />
+    <Property Name="featuredDateTimeBumpup" Type="DateTime" Precision="0" />
+    <Property Name="isUrgent" Type="Boolean" />
+    <Property Name="urgentDateTime" Type="DateTime" Precision="0" />
+    <Property Name="houseid" Type="Int32" />
+    <Property Name="islisting" Type="Boolean" />
+    <Property Name="listingDateTime" Type="DateTime" Precision="0" />
+    <Property Name="listingDateTimeBumpUp" Type="DateTime" Precision="0" />
+    <Property Name="isBumpup" Type="Boolean" />
+    <Property Name="bumpupDateTime" Type="DateTime" Precision="0" />
+    <Property Name="ss_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="siteEvent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strEvent" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="strDateTime" Type="DateTime" Precision="0" />
+    <Property Name="strStatus" Type="Int32" />
+    <Property Name="ss_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sporteventstable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strtype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strbed" Type="Int32" />
+    <Property Name="straddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strtown" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strcity" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strarea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strcounty" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strpostcode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strdescription" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="strolympics" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="strzone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strname" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strphone" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="stremail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strimage1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strimage2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strapproved" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strdate" Type="DateTime" Precision="0" />
+    <Property Name="strdatetime" Type="DateTime" Precision="0" />
+    <Property Name="strpostedby" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strinvisible" Type="Int32" />
+    <Property Name="strhits" Type="Int32" />
+    <Property Name="stradtype" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strevent" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="strprimevent" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strsecevent" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="strswap" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strimage3" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strimage4" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strparking" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strPrice" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strDateFrom" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strDateTo" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strNeg" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strEntered" Type="DateTime" Precision="0" />
+    <Property Name="strUpdated" Type="DateTime" Precision="0" />
+    <Property Name="strDateTimeBumpedUp" Type="DateTime" Precision="0" />
+    <Property Name="strSpotlightDateTime" Type="DateTime" Precision="0" />
+    <Property Name="strSpotlightDateTimeBumpedUp" Type="DateTime" Precision="0" />
+    <Property Name="strEmailStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strMeetHost" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ss_id" Type="Int32" />
+    <Property Name="strImage5" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strImage6" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strCaption" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="strAdd1" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="strAdd2" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="strAdd3" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="system">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="userprofile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="up_firstname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_lastname" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_dob" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="up_language" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="up_aboutme" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="up_image1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_image2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_entered" Type="DateTime" Precision="0" />
+    <Property Name="up_updated" Type="DateTime" Precision="0" />
+    <Property Name="up_username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_userid" Type="Int32" />
+    <Property Name="up_account" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="up_status" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="up_date" Type="DateTime" Precision="0" />
+    <Property Name="up_houseid" Type="Int32" />
+    <Property Name="up_work" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_education" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_hobbies" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="up_gender" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="up_country" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_event" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="up_contact" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="up_type" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_swap" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="up_membersince" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="up_iso" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="up_bed" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ss_id" Type="Int32" />
+    <Property Name="strHome" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_caption" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="up_datefrom" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="up_dateto" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="strusername" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strpassword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strsecurity" Type="Int32" />
+    <Property Name="strkeyword" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strdate" Type="DateTime" Precision="0" />
+    <Property Name="strstatus" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="strlast" Type="DateTime" Precision="0" />
+    <Property Name="strCountry" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="strIso" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="fb_userid" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="blacklist" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strEmailStatus" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strUnsubscribe" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="ss_id" Type="Int32" />
+    <Property Name="strTerms" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strFirstname" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="strLastname" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="usersdetail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="acquired" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ip" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="browser" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="region" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="datetime" Type="DateTime" Precision="0" />
+    <Property Name="ss_id" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

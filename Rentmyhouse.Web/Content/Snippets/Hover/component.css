@@ -1,0 +1,378 @@
+.grid {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	max-width: 1920px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	margin: -0.135em 28px 25px -0.135em;
+	width: 31.5%;
+	height: 300px;
+	text-align: center;
+	cursor: pointer;
+    background-color:#000;
+		
+}
+
+.grid figure.right {
+margin-right:0px;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 10px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+}
+
+.price-module {
+  left: 0;
+  bottom: 80px;
+  font-size: 24px;
+  padding: 10px 10px;
+  line-height: 24px;
+}
+
+
+.price-module span {
+    font-size: 11px;
+    text-transform: none;
+}
+
+.grid figure h2 {
+	font-family:franklin-gothic-ext-comp-urw;
+	font-size:33px;
+	letter-spacing:1px;
+	text-transform:uppercase;
+    width: 100%;
+	text-shadow:0 1px 3px #000000;
+}
+
+.grid figure p span,
+.grid figure h2 span {
+    display:block;
+    font-family: lato, "Trebuchet MS","Myriad Pro",Arial,sans-serif;
+    font-size: 14px;
+    letter-spacing:0;
+    line-height:30px;
+    padding-bottom:10px;
+    text-transform:none;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+figure.effect-sarah img.userimage,
+figure.effect-zoe img.userimage {
+display:block;
+height:100px;
+width:100px;
+border-radius:50%;
+border:3px solid #fff;
+opacity:1 !important;
+margin:0 auto;
+}
+
+figure.effect-sarah:hover img,
+figure.effect-zoe:hover img {
+       opacity: 0.4;
+}
+
+figure.effect-sarah:hover img.userimage {
+opacity:1 !important;
+}
+
+
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+figure.effect-sarah {
+	/*background: #42b078;*/
+}
+
+figure.effect-sarah img,
+figure.effect-zoe img {
+	width: 100%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: none;
+    height:310px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	-webkit-transform: translateZ(0);
+}
+
+figure.effect-sarah figcaption {
+	text-align: center;
+}
+
+figure.effect-sarah h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+	color:#fff;
+}
+
+
+figure.effect-lily:hover p,
+figure.effect-sarah:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*---------------*/
+/***** Zoe *****/
+/*---------------*/
+
+figure.effect-zoe figcaption {
+	top: auto;
+	bottom: 0;
+	height: 5.75em;
+	padding-top:10px !important;
+	background: #000;
+	color: #fff;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+
+figure.effect-zoe h2 {
+	float: left;
+}
+
+figure.effect-zoe figcaption > span {
+	float: right;
+}
+
+figure.effect-zoe p {
+	position: absolute;
+	bottom: 8em;
+	padding: 2em;
+	color: #fff;
+	text-transform: none;
+	font-size: 90%;
+	opacity: 1;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+	left:105px;
+	bottom:80px;
+}
+
+figure.effect-sarah p span {
+	text-transform: none;
+}
+
+
+
+figure.effect-zoe h2,
+figure.effect-zoe figcaption > span {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+
+figure.effect-zoe figcaption > span::before {
+	display: inline-block;
+	padding: 8px 10px;
+	font-family: 'feathericons';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+figure.effect-zoe h2 {
+	display: inline-block;
+}
+
+figure.effect-zoe:hover p {
+	opacity: 1;
+}
+
+figure.effect-zoe:hover figcaption,
+figure.effect-zoe:hover h2,
+figure.effect-zoe:hover figcaption > span {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-zoe:hover h2 {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-zoe:hover figcaption > span:nth-child(4) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-zoe:hover figcaption > span:nth-child(3) {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-zoe:hover figcaption > span:nth-child(2) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+
+
+@media (max-width: 1024px) {
+   
+	
+	figure.effect-lily img.userimage, 
+	figure.effect-sarah img.userimage,
+	figure.effect-zoe img.userimage {
+	margin:0 auto;
+	width:80px;
+	height:80px;
+	}
+	
+
+	figure.effect-sarah img, 
+	figure.effect-zoe img,
+	figure.effect-sarah p,
+	figure.effect-zoe p {
+	    -webkit-transform: none;
+		transform:none;
+		-webkit-transition:none;
+		transition:none;
+		opacity:1;
+	}
+	
+	figure.effect-sarah img, 
+	figure.effect-zoe img {
+	   opacity:0.7;
+           width:100%;
+	}
+	
+	
+	figure.effect-zoe h2,
+	figure.effect-zoe figcaption {
+	transform:none;
+	transition:none;
+	-webkit-transform: none;
+	padding:0;
+	}
+	
+	figure.effect-lily:hover img, 
+	figure.effect-sarah:hover img,
+	figure.effect-zoe:hover img {
+	opacity:0.6;
+	}
+	
+	figure.effect-sarah p,
+	figure.effect-zoe p,
+	.grid figure h2 {
+	width:100%;
+	padding:0;
+	left:auto;
+	}
+	
+	figure.effect-sarah h2 {
+	padding-top:85px;
+	}
+
+	figure.effect-sarah h2::after {
+	     -webkit-transform: none;
+	     transform:none;
+		 	 
+	}
+    .grid figure h2 span {
+	  font-size:13px;
+	}
+	
+	.grid figure p span {
+	display:none;
+	}
+}
+
+@media (max-width: 500px) {
+
+   	.grid figure {
+		width: 100%;
+                margin:0 0 -7px;
+		
+	}
+
+}
