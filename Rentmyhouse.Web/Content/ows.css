@@ -876,31 +876,7 @@ td#normalhometext
 	opacity: 1 !important;
         
 }
-#register_submit, #signin_submit, #favourite_submit,#favourite_submit_added,#favourite_submit_normal
-{
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-	border-image: none;
-	border-radius: 5px 5px 5px 5px;
-	border-style: solid;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	border-width: 1px;
-	cursor: pointer;
-	font-family: proxima-nova;
-	font-size: 13px;
-	font-weight: bold;
-	height: 30px;
-	moz-border-bottom-colors: none;
-	moz-border-left-colors: none;
-	moz-border-radius: 4px;
-	moz-border-right-colors: none;
-	moz-border-top-colors: none;
-	text-align: center;
-	text-transform: uppercase;
-	webkit-border-radius: 4px;
-	width: 90px;
-}
+
 .btn_yellow
 {
 	background-color: #F3C613;
@@ -2348,7 +2324,7 @@ th.headerSortDown
 {
 	background-color: #fff;
 	border-bottom: 1px solid #ccc;
-	height: 320px;
+	height: 350px;
 	margin: 0 auto;
 	padding: 70px 0 90px;
 	position: relative;
@@ -2387,15 +2363,6 @@ th.headerSortDown
 	line-height: 20px;
 	text-transform: none;
 }
-.home-discover p a {
-font-size:13px;
-padding:3px;
-}
-
-
-.home-discover p a:hover {
- color:#fff;
-}
 
 .home-discover p
 {
@@ -2404,7 +2371,7 @@ padding:3px;
 	font-size: 13px !important;
 	letter-spacing: 0;
 	line-height: 18px;
-	padding: 10px 10px 5px;
+	padding: 10px 20px 5px;
 	text-transform: none;
 }
 .home-discover img

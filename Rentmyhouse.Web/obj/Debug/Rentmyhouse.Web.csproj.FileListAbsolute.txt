@@ -134,3 +134,4 @@ C:\Git\londonNet\Rentmyhouse.Web\bin\DotNetOpenAuth.OpenId.xml
 C:\Git\londonNet\Rentmyhouse.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
 C:\Git\londonNet\Rentmyhouse.Web\obj\Debug\Rentmyhouse.dll
 C:\Git\londonNet\Rentmyhouse.Web\obj\Debug\Rentmyhouse.pdb
+C:\Git\londonNet\Rentmyhouse.Web\obj\Debug\Rentmyhouse.Web.csprojResolveAssemblyReference.cache
