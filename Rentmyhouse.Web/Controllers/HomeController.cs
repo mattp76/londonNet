@@ -6,7 +6,9 @@ using System.Web.Mvc;
 using Rentmyhouse.Repository;
 using Rentmyhouse.Interfaces;
 using Rentmyhouse.Models;
+using Rentmyhouse.ViewModels;
 using Rentmyhouse.Helpers;
+using PagedList;
 
 
 namespace Rentmyhouse.Controllers
@@ -14,60 +16,59 @@ namespace Rentmyhouse.Controllers
     public class HomeController : Controller
     {
 
-        public const int PageSize = 3;
-
-        #region Private member variables...
-        private IAdvertRepository advertRepository;
-        #endregion
-
-        #region Public Constructor...
-        /// <summary>
-        /// Public Controller to initialize User Repository
-        /// </summary>
-        public HomeController()
+        public ActionResult Index(string site)
         {
-            this.advertRepository = new AdvertRepository(new olympicsEntities());
-        } 
-        #endregion
 
-        
-        public ActionResult Index()
-        {
-   
-            var advertPaged = new PagedData<sporteventstable>();
-            IEnumerable<sporteventstable> adverts = advertRepository.GetAdvertsForHomepageGallery();
-
-            advertPaged.Data = adverts.Take(PageSize);
-            advertPaged.NumberOfPages = Convert.ToInt32(Math.Ceiling((double)adverts.Count() / PageSize));
-            advertPaged.CurrentPage = 1;
-
-            ViewData["HomepageGalleryAdverts"] = advertPaged;
             ViewBag.Css = "home";
+            ViewBag.Site = !string.IsNullOrEmpty(site) ? site : "london";
 
             return View();
-
         }
 
 
-        public ActionResult HomepageGallery(int page)
+        public ActionResult HomeDiscover()
         {
-            var advertPaged = new PagedData<sporteventstable>();
-            IEnumerable<sporteventstable> adverts = advertRepository.GetAdvertsForHomepageGallery();
 
-            advertPaged.Data = adverts.Skip(PageSize * (page - 1)).Take(PageSize);
+            //dbContext get content from table: cms where contentAliasType = "homeDiscover"
 
-            advertPaged.NumberOfPages = Convert.ToInt32(Math.Ceiling((double)adverts.Count() / PageSize));
-            advertPaged.CurrentPage = 1;
+            // Perform data access using the context 
+            using (var context = new olympicsEntities())
+            {
+                // Perform data access using the context 
+                var hd = from a in context.cms
+                         where a.SS_ID == 1 && a.contentTypeAlias == "homeDiscover"
+                         select a.content;
+                             
 
 
-            return PartialView(advertPaged);
+                var viewModel = new HomeDiscoverViewModel()
+                {
+                    homeDiscover = hd.FirstOrDefault().ToString()
+                };
+
+
+                return PartialView(viewModel);
+            }
+
         }
 
+        public ActionResult HomepageGallery(int? page)
+        {
 
+            using (var context = new olympicsEntities()) 
+            {     
+                // Perform data access using the context 
+                var adverts = from a in context.sporteventstables
+                              where a.ss_id == 1 && !string.IsNullOrEmpty(a.strimage1) && a.strapproved == "yes"
+                              orderby a.strdatetime descending
+                              select a;
 
+                int pageSize = 9;
+                int pageNumber = (page ?? 1);
+                return PartialView(adverts.ToPagedList(pageNumber, pageSize));
+            }
 
-
-
+        }
 
 
 

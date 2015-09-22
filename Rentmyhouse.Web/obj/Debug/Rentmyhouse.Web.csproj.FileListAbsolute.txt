@@ -93,9 +93,15 @@ C:\Git\londonNet\Rentmyhouse.Web\bin\DotNetOpenAuth.OAuth.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\DotNetOpenAuth.OpenId.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\EntityFramework.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\EntityFramework.SqlServer.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\Microsoft.Web.Infrastructure.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\MySql.Data.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\mysql.data.entity.EF6.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\MySql.Web.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\Newtonsoft.Json.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\PagedList.dll
+C:\Git\londonNet\Rentmyhouse.Web\bin\PagedList.Mvc.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\System.Web.Helpers.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\System.Web.Mvc.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\System.Web.Optimization.dll
@@ -107,6 +113,9 @@ C:\Git\londonNet\Rentmyhouse.Web\bin\WebGrease.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\WebMatrix.Data.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\WebMatrix.WebData.dll
 C:\Git\londonNet\Rentmyhouse.Web\bin\EntityFramework.xml
+C:\Git\londonNet\Rentmyhouse.Web\bin\EntityFramework.SqlServer.xml
+C:\Git\londonNet\Rentmyhouse.Web\bin\PagedList.xml
+C:\Git\londonNet\Rentmyhouse.Web\bin\PagedList.Mvc.xml
 C:\Git\londonNet\Rentmyhouse.Web\bin\Newtonsoft.Json.xml
 C:\Git\londonNet\Rentmyhouse.Web\bin\System.Web.Helpers.xml
 C:\Git\londonNet\Rentmyhouse.Web\bin\System.Web.Mvc.xml

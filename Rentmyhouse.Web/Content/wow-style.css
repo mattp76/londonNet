@@ -1,0 +1,345 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic);
+
+@font-face
+{
+	font-family: 'Bitter';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Bitter-Regular'),url(https://themes.googleusercontent.com/static/fonts/bitter/v5/SHIcXhdd5RknatSgOzyEkA.woff) format('woff');
+}
+@font-face
+{
+	font-family: 'Bitter';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Bitter-Bold'),url(https://themes.googleusercontent.com/static/fonts/bitter/v5/evC1haE-MsorTl_A7_uSGT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+
+#wowslider-container1, .inner-container #hero {
+    border-bottom: 1px solid #555;
+    height: 550px;
+}
+
+#wowslider-container1 {
+zoom:1;
+position:relative;
+z-index:1;
+text-align:left;
+margin:0 auto;
+border-bottom:1px solid #ccc;
+padding-top:60px;
+}
+
+#wowslider-container1 .title-container {
+ color: white;
+    height: auto;
+    padding: 80px 10px 10px;
+    position: relative;
+    z-index: 20;
+	text-align:center;
+	width:885px;
+	margin:0 auto;
+}
+
+
+#wowslider-container1 .fade {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    z-index: 10;
+	/* -moz-box-shadow: inset 0 0 200px #000;  
+	 -webkit-box-shadow: inset 0 0 200px #000;   
+	 box-shadow: inset 0 0 200px #000;*/
+	 background-color:#000;
+	 opacity:0.2;
+	 filter: Alpha(Opacity=20);
+}
+
+
+* html #wowslider-container1 {
+width:500px;
+}
+
+#wowslider-container1 .ws_images div,
+#wowslider-container1 .ws_images div img {
+height:100%;
+}
+
+#wowslider-container1 .ws_images ul {
+position:relative;
+width:10000%;
+height:100%;
+left:0;
+list-style:none;
+border-spacing:0;
+overflow:visible;
+animation:wsBasic 12s infinite;
+-moz-animation:wsBasic 12s infinite;
+-webkit-animation:wsBasic 12s infinite;
+margin:0;
+padding:0;
+}
+
+#wowslider-container1 .ws_images ul li {
+width:1%;
+line-height:0;
+float:left;
+font-size:0;
+margin:0!important;
+padding:0!important;
+}
+
+#wowslider-container1 .ws_images {
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+#wowslider-container1 .ws_images a {
+width:100%;
+display:none;
+color:transparent;
+}
+
+#wowslider-container1 img {
+max-width:none!important;
+}
+
+#wowslider-container1 .ws_images img {
+border:none 0;
+max-width:none;
+padding:0;
+width:100%;
+height:600px;
+}
+
+#wowslider-container1 a {
+text-decoration:none;
+outline:none;
+border:none;
+color:#fff;
+font:normal 16px/21px "lato", "Trebuchet MS",georgia;
+}
+
+#wowslider-container1 a:hover {
+text-decoration:none;
+}
+
+
+#wowslider-container1 .ws_bullets {
+font-size:0;
+float:left;
+position:absolute;
+z-index:70;
+bottom:5px;
+right:50px;
+padding:10px;
+}
+
+#wowslider-container1 .ws_bullets div {
+position:relative;
+float:left;
+}
+
+#wowslider-container1 a.wsl {
+display:none;
+}
+
+#wowslider-container1 .ws_bullets a {
+width:22px;
+height:20px;
+background:url(./bullet1.png) left top;
+float:left;
+text-indent:-4000px;
+position:relative;
+margin-left:3px;
+color:transparent;
+transition:none;
+}
+
+#wowslider-container1 a.ws_next,
+#wowslider-container1 a.ws_prev {
+position:absolute;
+top:50%;
+margin-top:-50px;
+z-index:60;
+height:100px;
+width:60px;
+background-image:url(./arrows.png);
+display:none !important;
+}
+
+#wowslider-container1 a.ws_next {
+background-position:100% 0;
+right:0;
+top:230px;
+}
+
+#wowslider-container1 a.ws_prev {
+left:0;
+top:230px;
+background-position:0 0;
+}
+
+#wowslider-container1 .ws_bullets .ws_bulframe {
+top:-60px;
+display:none;
+overflow:visible;
+position:absolute;
+cursor:pointer;
+-moz-box-shadow:0 0 5px #999;
+box-shadow:0 0 5px #999;
+border:5px solid #FFF;
+}
+
+#wowslider-container1 .hero-gradient {
+  background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    border-radius: 2px;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    left: 0;
+    padding: 40px 0px 13px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+	display:none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+    bottom:99px;
+}
+
+#wowslider-container1 .ws-title {
+	position:absolute;
+	bottom:0px;
+	left:20px;
+	z-index:20;
+	display:none!important;
+}
+
+
+#wowslider-container1 .ws-title span {
+    color: #f1f1f1;
+    font-family: 'Playfair Display',serif;
+    font-size: 15px;
+    font-style: italic;
+	text-transform:none;
+}
+
+#wowslider-container1 .ws-title div {
+	color: #fff;
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-size: 25px;
+    line-height: 35x;
+	margin-bottom:10px;
+}
+
+
+
+
+
+
+#wowslider-container1 .ws_shadow {
+background:url(./shadow.png) left 100%;
+background-repeat:no-repeat;
+background-size:100%;
+width:100%;
+height:20%;
+position:absolute;
+left:0;
+bottom:-75px;
+z-index:-1;
+}
+
+#wowslider-container1 .ws_bullets a img {
+text-indent:0;
+display:block;
+top:15px;
+left:-64px;
+visibility:hidden;
+position:absolute;
+-moz-box-shadow:0 0 5px #999;
+box-shadow:0 0 5px #999;
+border:5px solid #FFF;
+max-width:none;
+}
+
+#wowslider-container1 .ws_bullets a:hover img {
+visibility:visible;
+}
+
+#wowslider-container1 .ws_bulframe div div {
+height:48px;
+overflow:visible;
+position:relative;
+}
+
+#wowslider-container1 .ws_bulframe div {
+left:0;
+overflow:hidden;
+position:relative;
+width:128px;
+background-color:#FFF;
+}
+
+#wowslider-container1 .ws_bulframe span {
+display:block;
+position:absolute;
+top:-62px;
+margin-left:-5px;
+left:64px;
+background:url(./triangle.png);
+width:15px;
+height:6px;
+display:none;
+}
+
+#wowslider-container1 .ws_bullets a:hover,#wowslider-container1 .ws_bullets a.ws_selbull {
+background-position:0 100%;
+}
+
+* html #wowslider-container1 a.ws_next,* html #wowslider-container1 a.ws_prev,#wowslider-container1:hover a.ws_next,#wowslider-container1:hover a.ws_prev {
+display:block;
+}
+
+33.33%,50% {
+left:-100%;
+}
+
+66.67%,83.33% {
+left:-200%;
+}
+
+* html #wowslider-container1 .ws_shadow,*+html #wowslider-container1 .ws_shadow {
+background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='engine1/shadow.png',sizingMethod='scale');
+}
+
+
+.title-container h3.hero{
+   width:auto;
+   line-height:10px;
+   font-weight:bold;
+}
+
+.title-container h3.hero a {
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px #000000;
+      font-size: 17px !important;
+    font-weight: 600 !important;
+   text-transform:none;
+
+}
+
+.title-container h3.hero span {
+ display:none;
+}
+
+.title-container h3.hero a:hover {
+color:#f1f1f1 !important;
+}

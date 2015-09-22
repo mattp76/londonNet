@@ -1,0 +1,40 @@
+﻿@model PagedList.IPagedList<Rentmyhouse.Models.sporteventstable>
+@using PagedList.Mvc;
+
+
+
+<div class="grid">
+
+@{int i = 0;}
+
+@foreach (var item in Model) {
+
+i++;
+       
+<figure class="effect-zoe @(i == 3 ? "right" : String.Empty)" style="background-image:url('http://www.londonrentmyhouse.com/biggerthumbnail/@item.strimage1');background-size:cover;">
+	<a href="@item.id">View more</a>
+	<figcaption>
+		@item.strbed @item.strtype @item.strcity
+
+        <p>
+			<img class="userimage" src="http://www.londonrentmyhouse.com/images/user-anon.png">
+			<span>@item.strpostedby</span>
+		</p>
+	</figcaption>		
+</figure> 
+    
+if(i == 3){
+    i = 0;
+}
+  
+}
+
+</div>
+
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+<div id="contentPager">
+    @Html.PagedListPager(Model, page => Url.Action("HomepageGallery", new { page }))
+</div>

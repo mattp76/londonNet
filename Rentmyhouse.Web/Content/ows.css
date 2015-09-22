@@ -651,7 +651,7 @@ td#normalhometext
 .primarycontent .happening
 {
 	font-family: proxima-nova;
-	font-size: 13px;
+	font-size: 14px;
 	height: auto;
 	position: relative;
 	width: 100%;
@@ -669,7 +669,7 @@ td#normalhometext
 
 .primarycontent .happening .happening-pod
 {
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 18px;
 	position: relative;
 }
@@ -693,9 +693,9 @@ td#normalhometext
 	border: 0;
 	display: table;
 	position: relative;
-	width: 100%;
+	width: 1160px;
 }
-.home .outer-container
+.home .outer-container-home
 {
 	margin: 32px auto 0px;
 	width: 1160px;
@@ -1922,7 +1922,7 @@ th.headerSortDown
 {
 	border-bottom: 1px solid #ccc;
 	float: left;
-	margin: 0 15px 30px 0;
+	margin: 0 15px 45px 0;
         padding-bottom:30px;
          background-color:#f1f1f1;
 }
@@ -2348,7 +2348,7 @@ th.headerSortDown
 {
 	background-color: #fff;
 	border-bottom: 1px solid #ccc;
-	height: 200px;
+	height: 320px;
 	margin: 0 auto;
 	padding: 70px 0 90px;
 	position: relative;
@@ -2359,15 +2359,6 @@ th.headerSortDown
 {
 	margin: 0 auto;
 	width: 1160px;
-}
-.home-discover .btn
-{
-   display: block;
-    font-size: 14px !important;
-    height: 16px !important;
-    margin: 0 auto;
-    padding: 8px;
-    width: 140px !important;
 }
 
 .home-discover .brazil
@@ -2391,9 +2382,9 @@ th.headerSortDown
 {
 	color: #333;
 	font-family: lato;
-	font-size: 17px !important;
+	font-size: 15px !important;
 	letter-spacing: 0;
-	line-height: 0;
+	line-height: 20px;
 	text-transform: none;
 }
 .home-discover p a {
@@ -2413,7 +2404,7 @@ padding:3px;
 	font-size: 13px !important;
 	letter-spacing: 0;
 	line-height: 18px;
-	padding: 0 10px 5px;
+	padding: 10px 10px 5px;
 	text-transform: none;
 }
 .home-discover img
@@ -2825,7 +2816,7 @@ padding:3px;
 }
 .nav ul
 {
-	display: inline-block;
+	margin:0 auto;
 	list-style-type: none;
 	width: 1060px;
 }

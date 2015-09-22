@@ -1,47 +1,86 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    var site = ViewBag.Site;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 @section Styles {
     <link href="@Url.Content("~/Content/Snippets/Hover/component.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/PagedList.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/wow-style.css")" rel="stylesheet" type="text/css" />
 }
 
 
 @section Scripts {
   
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".page-number").live("click", function () {
+   <script language="javascript" type="text/javascript">
+       $(document).ready(function () {
+           $(document).on("click", "#contentPager a[href]", function () {
 
-                
-                var page = parseInt($(this).html());
+              // $('#content').hide();
+               $('#loader').fadeIn();
 
+               $.ajax({
+                   url: $(this).attr("href"),
+                   type: 'GET',
+                   cache: false,
+                   success: function (result) {
 
-                console.log(page);
+                       $('#loader').fadeOut();
+                       $('#content').html(result);
 
-                
-
-                $.ajax({
-                    url: '@Url.Action("HomepageGallery")',
-                data: { "page": page },
-                success: function (data) {
-                    $("#HomepageGallery").html(data);
-                }
-            });
-        });
-    });
-</script>
-
-
+                   }
+               });
+               return false;
+           });
+       });
+    </script>
 }
 
 
+@section HomepageHero
+{
 
-<div id="HomepageGallery">
-@{Html.RenderPartial("HomepageGallery", ViewData["HomepageGalleryAdverts"]);}
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+
+    <div class="ws_images slideshow rio">
+        <ul>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/1.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_0" />Rio property for rent</li>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/2.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_1" />Rio property for rent</li>
+            <li><img src="http://www.@(site)rentmyhouse.com/data1/images/3.jpg" alt="Rio property for rent" title="Rio property for rent" id="wows1_0" />Rio property for rent</li>
+        </ul>
+    </div>
+
+
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/1.jpg" alt="Rio property for rent" />Rio property for rent</a>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/2.jpg" alt="Rio property for rent" />Rio property for rent</a>
+            <a href="#" title="1"><img src="http://www.@(site)rentmyhouse.com/data1/tooltips/3.jpg" alt="Rio property for rent" />Rio property for rent</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://www.@(site)rentmyhouse.com/engine1/wowslider1.js"></script>
+    <script type="text/javascript" src="http://www.@(site)rentmyhouse.com/engine1/script1.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+
+</div>
+
+}
+
+@section HomeDiscover
+{
+
+@Html.Action("HomeDiscover")
+
+}
+
+<div id="loader"></div>
+<div id="content">
+@Html.Action("HomepageGallery")
 </div>
     

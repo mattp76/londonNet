@@ -62,7 +62,7 @@ namespace Rentmyhouse.Repository
 
         public void UpdateAdvert(sporteventstable advert)
         {
-            context.Entry(advert).State = EntityState.Modified;
+            //context.Entry(advert).State = EntityState.Modified;
         }
 
         public void Save()
